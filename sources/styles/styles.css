@@ -1,0 +1,79 @@
+body {
+    font-size: 12px;
+    font-family: 'Source Code Pro', monospace;
+	background: linear-gradient(
+        50deg, 
+        #465ADE, 
+        #3544A6, 
+        #1A2253, 
+        #121637,
+        #465ADE,
+        #3544A6
+        );
+	background-size: 800% 800%;
+	animation: gradient-background 50s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient-background {
+	0% {
+		background-position: 0% 50%;
+	}
+	25% {
+		background-position: 100% 50%;
+	}
+    50% {
+		background-position: 0% 50%;
+    }
+    75% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10% 0;
+    padding-bottom: 2.5em;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 5vh;
+    text-shadow: 0px 5px 22px #1A2253;
+    margin: 0.5em;
+}
+
+h2 {
+    font-size: 4vh;
+    text-shadow: 0px 5px 22px #1A2253;
+    margin: 0.5em;
+}
+
+h3 {
+    font-size: 3vh;
+    text-shadow: 0px 5px 22px #1A2253;
+    margin: 0.5em;
+}
+
+p {
+    font-size: 1vh;
+    margin: 1em;
+}
+
+main {
+    margin: 0;
+    padding: 5em;
+    padding-top: 0;
+}
+
+footer {
+    margin: 0;
+    padding: 5em;
+}

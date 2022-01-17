@@ -5,19 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="sources/styles/styles.css" type="text/css">
+    <link rel="stylesheet" href="sources/styles/button-styles.css" type="text/css">
+    <link rel="stylesheet" href="sources/styles/nav-styles.css" type="text/css">
+    <link rel="stylesheet" href="sources/styles/about-section-styles.css" type="text/css">
     <title>Jesus Cruz - Portfolio</title>
 </head>
 
 <body>
     <!-- HEADER -->
-    <header>
+    <header id="AboutMe">
         <nav>
-            <ul>
-                <li><a href="#AboutMe">About Me</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#ContactMe">Contact Me</a></li>
+            <ul class="nav-list">
+                <li class="nav-item active"><a href="#AboutMe">About Me</a></li>
+                <li class="nav-item"><a href="#Skills">Skills</a></li>
+                <li class="nav-item"><a href="#Projects">Projects</a></li>
+                <li class="nav-item"><a href="#ContactMe">Contact Me</a></li>
             </ul>
         </nav>
 
@@ -25,76 +33,69 @@
         <h2>Jesu&#769;s Oscar Ignacio Cruz Cruz</h2>
         <h3>
             21 años
-            <img src="sources/images/flag-for-chile.png" alt="Imagen pequeña de la bandera de Chile."
-                style="width: 25px; height: auto;">
+            <img src="sources/images/flag-for-chile.png" title="Flag of Chile"
+                alt="Imagen pequeña de la bandera de Chile." style="width: 25px; height: auto;">
         </h3>
-        <a href="sources/Jesús Oscar Ignacio Cruz Cruz.pdf" target="_blank">
-                <img src="sources/images/cv.png" title="Resume CV" alt="Small image of resume"
-                    style="width: 50px; height: auto;">
-                RESUME (CV)
+        <a class="resume-button" role="button" href="sources/Jesús Oscar Ignacio Cruz Cruz.pdf" target="_blank">
+            <img src="sources/images/cv.png" title="Resume CV" alt="Small image of resume">
         </a>
-        <a href="https://www.linkedin.com/in/jesus-cruz-5a03b81b5" target="_blank">
-            <img src="sources/images/linkedin-icon.png" title="LinkedIn Profile" alt="Go to my LinkedIn profile"
-                style="width: 40px; height: auto;">
+        <a class="linkedin-icon" role="button" href="https://www.linkedin.com/in/jesus-cruz-5a03b81b5" target="_blank">
+            <img src="sources/images/linkedin-icon.png" title="LinkedIn Profile" alt="Go to my LinkedIn profile">
         </a>
-        <a href="https://github.com/JesusCruz22" target="_blank">
-            <img src="sources/images/github-icon.png" title="GitHub Profile" alt="Go to my GitHub profile"
-                style="width: 40px; height: auto;">
+        <a class="github-icon" role="button" href="https://github.com/JesusCruz22" target="_blank">
+            <img src="sources/images/github-icon.png" title="GitHub Profile" alt="Go to my GitHub profile">
         </a>
     </header>
 
     <main>
         <!-- ABOUT ME SECTION -->
-        <section>
+        <section class="about-section">
             <!-- TITLE OF THE SECTION -->
-            <h2 id="AboutMe">About Me</h2>
+            <h2>About Me</h2>
             <p>
                 I am a Junior Front-End Web Developer from Chile.
                 What I like the most about Web Development is the design of the user
                 interface and the user experience,
-                I also enjoy coding the interaction between the user and the website.
+                I also enjoy coding the interaction between the user and the website.<br>
                 I always try to do my best and show my skills with the web technologies
-                that I know.
+                that I know.<br>
                 I am dispose to learn new topics, technologies and techniques
-                to improve my professional career.
-
+                to improve my professional career.<br>
+                <br>
                 Indie Game Development is another topic that I like to learn.
                 I love videogames, movies and music.
             </p>
         </section>
 
         <!-- SKILLS SECTION -->
-        <section>
+        <section class="skills-section">
             <!-- TITLE OF THE SECTION -->
             <h2 id="Skills">Skills</h2>
-            <ul>
-                <li>
+            <ul class="list">
+                <li class="list-item">
                     HTML
                     <img src="sources/images/html-icon.png" title="HTML" alt="HTML Icon"
                         style="width: 30px; height: auto;">
                 </li>
-                <li>
+                <li class="list-item">
                     CSS
                     <img src="sources/images/css-icon.png" title="CSS" alt="HTML Icon"
                         style="width: 30px; height: auto;">
                 </li>
-                <li>
+                <li class="list-item">
                     JavaScript
                     <img src="sources/images/js-icon.png" title="JavaScript" alt="HTML Icon"
                         style="width: 30px; height: auto;">
                 </li>
-                <li>React</li>
-                <li>Java</li>
-                <li>C#</li>
-                <li>SQL</li>
-
-
-
+                <li class="list-item">React</li>
+                <li class="list-item">Java</li>
+                <li class="list-item">C#</li>
+                <li class="list-item">SQL</li>
             </ul>
         </section>
 
         <!-- PROJECTS SECTION -->
-        <section>
+        <section class="projects-section">
             <!-- TITLE OF THE SECTION -->
             <h2 id="Projects">Projects</h2>
 
@@ -102,87 +103,95 @@
             <h3 id="Timeline">Chronology of the projects that I carried out:</h3>
 
             <!-- PROJECT ARTICLE: BASIC CALCULATOR -->
-            <article>
+            <article class="project-article">
                 <figure>
                     <!-- PROJECT TITLE -->
                     <h4>First Project - Basic Calculator</h4>
                     <!-- SCREENSHOT OF THE PROJECT -->
-                    <img src="sources/images/basic-calculator.png" title="Basic Calculator - Project #1"
-                        alt="Image of the project Basic Calculator" style="width: 400px; height: auto;">
+                    <img class="project-image" src="sources/images/basic-calculator.png"
+                        title="Basic Calculator - Project #1" alt="Image of the project Basic Calculator"
+                        style="width: 400px; height: auto;">
                     <figcaption>
                         Screenshoot of the project "Basic Calculator"
                     </figcaption>
                     <!-- DETAILS OF THE PROJECT -->
                     <details>
                         <summary>Details</summary>
-                        <ul>
-                            <li>My first project with HTML, CSS and Javascript.</li>
-                            <li>Page without responsive design and unnecessarily long javascript code</li>
-                            <li>Calculates addition, subtraction, division and multiplication between two numbers.</li>
-                            <li>Allows whole numbers and decimals.</li>
+                        <ul class="list">
+                            <li class="list-item">My first project with HTML, CSS and Javascript.</li>
+                            <li class="list-item">Page without responsive design and unnecessarily long javascript code
+                            </li>
+                            <li class="list-item">Calculates addition, subtraction, division and multiplication between
+                                two numbers.</li>
+                            <li class="list-item">Allows whole numbers and decimals.</li>
                         </ul>
                     </details>
                     <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                    <img src="sources/images/html-icon.png" title="HTML" alt="HTML Icon"
+                    <img class="project-icons" src="sources/images/html-icon.png" title="HTML" alt="HTML Icon"
                         style="width: 30px; height: auto;">
-                    <img src="sources/images/css-icon.png" title="CSS" alt="HTML Icon"
+                    <img class="project-icons" src="sources/images/css-icon.png" title="CSS" alt="HTML Icon"
                         style="width: 30px; height: auto;">
-                    <img src="sources/images/js-icon.png" title="JavaScript" alt="HTML Icon"
+                    <img class="project-icons" src="sources/images/js-icon.png" title="JavaScript" alt="HTML Icon"
                         style="width: 30px; height: auto;">
                     <!-- CODE BUTTON -->
-                    <a href="https://github.com/JesusCruz22/Calculadora" target="_blank">
-                            <img src="sources/images/github-icon.png" title="Github" alt="View code on GitHub"
-                                style="width: 25px; height: auto;">
-                            Code
+                    <a class="github-icon" role="button" href="https://github.com/JesusCruz22/Calculadora"
+                        target="_blank">
+                        <img class="project-icons" src="sources/images/github-icon.png" title="Github"
+                            alt="View code on GitHub" style="width: 25px; height: auto;">
+                        Code
                     </a>
                     <!-- RUN PROJECT BUTTON -->
-                    <a href="projects/calculadora/index.html" target="_blank">
-                            <img src="sources/images/link-icon.png" title="Run Project" alt="Open project in a new tab"
-                                style="width: 25px; height: auto;">
-                            Run Project
+                    <a class="run-project-icon" role="button" href="projects/calculadora/index.html" target="_blank">
+                        <img class="project-icons" src="sources/images/link-icon.png" title="Run Project"
+                            alt="Open project in a new tab" style="width: 25px; height: auto;">
+                        Run Project
                     </a>
                 </figure>
             </article>
 
             <!-- PROJECT ARTICLE: BASIC CALCULATOR V2 -->
-            <article>
+            <article class="project-article">
                 <figure>
                     <!-- PROJECT TITLE -->
-                    <h4>Second Project - Basic Calculator V2</h4>
+                    <h4>First Project - Basic Calculator</h4>
                     <!-- SCREENSHOT OF THE PROJECT -->
-                    <img src="sources/images/basic-calculator.png" title="Basic Calculator - Project #2"
-                        alt="Image of the project Basic Calculator" style="width: 400px; height: auto;">
+                    <img class="project-image" src="sources/images/basic-calculator.png"
+                        title="Basic Calculator - Project #1" alt="Image of the project Basic Calculator"
+                        style="width: 400px; height: auto;">
                     <figcaption>
-                        Screenshoot of the project "Basic Calculator V2"
+                        Screenshoot of the project "Basic Calculator"
                     </figcaption>
                     <!-- DETAILS OF THE PROJECT -->
                     <details>
                         <summary>Details</summary>
-                        <ul>
-                            <li>My first project with HTML, CSS and Javascript.</li>
-                            <li>Page without responsive design and unnecessarily long javascript code</li>
-                            <li>Calculates addition, subtraction, division and multiplication between two numbers.</li>
-                            <li>Allows whole numbers and decimals.</li>
+                        <ul class="list">
+                            <li class="list-item">My first project with HTML, CSS and Javascript.</li>
+                            <li class="list-item">Page without responsive design and unnecessarily long javascript code
+                            </li>
+                            <li class="list-item">Calculates addition, subtraction, division and multiplication between
+                                two numbers.</li>
+                            <li class="list-item">Allows whole numbers and decimals.</li>
                         </ul>
                     </details>
                     <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                    <img src="sources/images/html-icon.png" title="HTML" alt="HTML Icon"
+                    <img class="project-icons" src="sources/images/html-icon.png" title="HTML" alt="HTML Icon"
                         style="width: 30px; height: auto;">
-                    <img src="sources/images/css-icon.png" title="CSS" alt="HTML Icon"
+                    <img class="project-icons" src="sources/images/css-icon.png" title="CSS" alt="HTML Icon"
                         style="width: 30px; height: auto;">
-                    <img src="sources/images/js-icon.png" title="JavaScript" alt="HTML Icon"
+                    <img class="project-icons" src="sources/images/js-icon.png" title="JavaScript" alt="HTML Icon"
                         style="width: 30px; height: auto;">
                     <!-- CODE BUTTON -->
-                    <a href="https://github.com/JesusCruz22/Calculadora" target="_blank">
-                            <img src="sources/images/github-icon.png" title="Github" alt="View code on GitHub"
-                                style="width: 25px; height: auto;">
-                            Code
+                    <a class="github-icon" role="button" href="https://github.com/JesusCruz22/Calculadora"
+                        target="_blank">
+                        <img class="project-icons" src="sources/images/github-icon.png" title="Github"
+                            alt="View code on GitHub" style="width: 25px; height: auto;">
+                        Code
                     </a>
                     <!-- RUN PROJECT BUTTON -->
-                    <a href="projects/calculadora/index.html" target="_blank">
-                            <img src="sources/images/link-icon.png" title="Run Project" alt="Open project in a new tab"
-                                style="width: 25px; height: auto;">
-                            Run Project
+                    <a class="run-project-icon" role="button" href="projects/calculadora/index.html" target="_blank">
+                        <img class="project-icons" src="sources/images/link-icon.png" title="Run Project"
+                            alt="Open project in a new tab" style="width: 25px; height: auto;">
+                        Run Project
                     </a>
                 </figure>
             </article>
@@ -192,13 +201,11 @@
     <!-- FOOTER -->
     <footer>
         <h2 id="ContactMe">Contact me</h2>
-        <a href="https://www.linkedin.com/in/jesus-cruz-5a03b81b5" target="_blank">
-            <img src="sources/images/linkedin-icon.png" title="LinkedIn Profile" alt="Small image of resume"
-                style="width: 40px; height: auto;">
+        <a class="linkedin-icon" role="button" href="https://www.linkedin.com/in/jesus-cruz-5a03b81b5" target="_blank">
+            <img src="sources/images/linkedin-icon.png" title="LinkedIn Profile" alt="Small image of resume">
         </a>
-        <a href="https://github.com/JesusCruz22" target="_blank">
-            <img src="sources/images/github-icon.png" title="GitHub Profile" alt="Small image of resume"
-                style="width: 40px; height: auto;">
+        <a class="github-icon" role="button" href="https://github.com/JesusCruz22" target="_blank">
+            <img src="sources/images/github-icon.png" title="GitHub Profile" alt="Small image of resume">
         </a>
     </footer>
 </body>

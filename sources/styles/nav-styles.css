@@ -1,0 +1,37 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;    
+    padding: 10px;
+    background-color: #222;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    border-radius: 10px;
+}
+
+.nav-item a {
+    display: block;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+.active {
+    background-color: #465ADE;
+}
+
+.nav-item:hover {
+    background-color: #333;
+    border-radius: 15px;
+}

@@ -1,0 +1,28 @@
+.resume-button, .linkedin-icon, .github-icon {
+    display: inline-flex;
+    align-items: center;
+    margin: 1em 2em;
+    background: linear-gradient(45deg, white, #C2C2C2);
+    border-radius: 10px;
+    transition: all 0.2s ease; 
+    text-decoration: none;
+}
+
+.resume-button:hover, .linkedin-icon:hover, .github-icon:hover {
+    transition: all 0.2s ease;
+    border-radius: 15px;
+    background: linear-gradient(45deg, white, #F2F2F2);
+}
+
+.resume-button img, .linkedin-icon img, .github-icon img {
+    transition: all 0.2s ease;
+    width: 5vh;
+    height: 5vh;
+    margin: 0.5em;
+}
+
+.resume-button img:hover, .linkedin-icon img:hover, .github-icon img:hover {
+    transition: all 0.2s ease;
+    width: 6vh;
+    height: 6vh;
+}
