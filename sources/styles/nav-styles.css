@@ -1,37 +1,69 @@
 nav {
+    transition: all 0.2s ease;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;    
-    padding: 10px;
-    background-color: #222;
+    padding: 1em;
+    background-color: rgb(34, 34, 34, 0.5);
+    opacity: 0;
+    animation: slidein 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+nav:hover {
+    transition: all 0.2s ease;
+    padding: 1.5em;
+}
+
+@keyframes slidein {
+    100% { opacity: 1; }
 }
 
 .nav-list {
     list-style-type: none;
     margin: auto;
+    padding: 0;
     display: flex;
     justify-content: center;
 }
 
 .nav-item {
     border-radius: 10px;
+    margin: auto 2em;
 }
 
 .nav-item a {
+    transition: all 0.2s ease;
     display: block;
-    margin: auto;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 15px 20px;
+    padding: 1.5em 3em;
+    border-radius: 10px;
 }
 
-.active {
-    background-color: #465ADE;
+.nav-item.active a {
+    transition: all 0.2s ease;
+    background: linear-gradient(122deg, white, #C9C9C9);
+    color: #222;
+    border-radius: 10px;
 }
 
-.nav-item:hover {
-    background-color: #333;
+.nav-item a:hover, .nav-item.active a:hover {
+    transition: all 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #121637;
+    padding: 1.6em 3.5em;
     border-radius: 15px;
+}
+
+.nav-item a:active, .nav-item.active a:active {
+    transition: all 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #121637;
+    padding: 1.5em 3em;
+    border-radius: 20px;
 }

@@ -1,0 +1,54 @@
+header {
+    position: relative;
+    display: block;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10vw;
+    text-align: center;
+    color: white;
+}
+
+h1.first {
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 17ch;
+    opacity: 0;
+    animation: typing 1s steps(17), blink 1s steps(18) forwards;
+    overflow: hidden;
+}
+
+h2.first {
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 26ch;
+    opacity: 0;
+    animation: typing 1s steps(27), blink 1s steps(28) forwards;
+    animation-delay: 1s;
+    overflow: hidden;
+}
+
+h3.first {
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 17ch;
+    opacity: 0;
+    animation: typing 1s steps(17), blink 1s steps(18) forwards;
+    animation-delay: 2s;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+@keyframes blink {
+    100% { 
+        border-color: transparent; 
+        opacity: 1;
+    }
+}

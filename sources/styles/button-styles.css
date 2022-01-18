@@ -1,11 +1,18 @@
 .resume-button, .linkedin-icon, .github-icon {
     display: inline-flex;
     align-items: center;
-    margin: 1em 2em;
+    margin: 2vh 2em;
     background: linear-gradient(45deg, white, #C2C2C2);
     border-radius: 10px;
     transition: all 0.2s ease; 
     text-decoration: none;
+    opacity: 0;
+    animation: slidein 1s ease forwards;
+    animation-delay: 4s;
+}
+
+@keyframes slidein {
+    100% { opacity: 1; }
 }
 
 .resume-button:hover, .linkedin-icon:hover, .github-icon:hover {
@@ -14,15 +21,27 @@
     background: linear-gradient(45deg, white, #F2F2F2);
 }
 
+.resume-button:active, .linkedin-icon:active, .github-icon:active {
+    transition: all 0.2s ease;
+    border-radius: 20px;
+    background: linear-gradient(45deg, white, #B2B2B2);
+}
+
 .resume-button img, .linkedin-icon img, .github-icon img {
     transition: all 0.2s ease;
-    width: 5vh;
-    height: 5vh;
+    width: 5em;
+    height: 5em;
     margin: 0.5em;
 }
 
 .resume-button img:hover, .linkedin-icon img:hover, .github-icon img:hover {
     transition: all 0.2s ease;
-    width: 6vh;
-    height: 6vh;
+    width: 5.5em;
+    height: 5.5em;
+}
+
+.resume-button img:active, .linkedin-icon img:active, .github-icon img:active {
+    transition: all 0.2s ease;
+    width: 5em;
+    height: 5em;
 }

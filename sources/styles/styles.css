@@ -5,7 +5,7 @@ body {
         50deg, 
         #465ADE, 
         #3544A6, 
-        #1A2253, 
+        #1a2253, 
         #121637,
         #465ADE,
         #3544A6
@@ -33,43 +33,55 @@ body {
     }
 }
 
-header {
-    margin: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 10% 0;
-    padding-bottom: 2.5em;
-    text-align: center;
-    color: white;
+h1 {
+    transition: all 0.2s ease;
+    font-weight: 700;
+    font-size: 4em;
+    text-shadow: 0px 5px 22px #1A2253;
+    margin: auto;
+    margin-bottom: 1.5vh;
 }
 
-h1 {
-    font-size: 5vh;
-    text-shadow: 0px 5px 22px #1A2253;
-    margin: 0.5em;
+h1:hover {
+    transition: all 0.2s ease;
+    font-size: 4.5em;
 }
 
 h2 {
-    font-size: 4vh;
+    transition: all 0.2s ease;
+    font-size: 3em;
     text-shadow: 0px 5px 22px #1A2253;
-    margin: 0.5em;
+    margin: auto;
+    margin-bottom: 1.5vh;
+}
+
+h2:hover {
+    transition: all 0.2s ease;
+    font-size: 3.5em;
 }
 
 h3 {
-    font-size: 3vh;
+    transition: all 0.2s ease;
+    font-size: 2em;
     text-shadow: 0px 5px 22px #1A2253;
-    margin: 0.5em;
+    margin: auto;
+    margin-bottom: 1.5vh;
+}
+
+h3:hover {
+    transition: all 0.2s ease;
+    font-size: 2.5em;
 }
 
 p {
     font-size: 1vh;
-    margin: 1em;
+    margin: 0;
+    margin: 1vh;
 }
 
 main {
     margin: 0;
-    padding: 5em;
+    padding: 1vw;
     padding-top: 0;
 }
 
