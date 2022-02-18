@@ -1,14 +1,15 @@
 .resume-button, .linkedin-icon, .github-icon {
     display: inline-flex;
     align-items: center;
-    margin: 2vh 2em;
+    margin: 1rem;
     background: linear-gradient(45deg, white, #C2C2C2);
     border-radius: 10px;
     transition: all 0.2s ease; 
     text-decoration: none;
     opacity: 0;
     animation: slidein 1s ease forwards;
-    animation-delay: 4s;
+    animation-delay: 3s;
+    flex-wrap: nowrap;
 }
 
 @keyframes slidein {
@@ -17,31 +18,77 @@
 
 .resume-button:hover, .linkedin-icon:hover, .github-icon:hover {
     transition: all 0.2s ease;
-    border-radius: 15px;
+    border-radius: 10px;
     background: linear-gradient(45deg, white, #F2F2F2);
 }
 
 .resume-button:active, .linkedin-icon:active, .github-icon:active {
     transition: all 0.2s ease;
-    border-radius: 20px;
+    border-radius: 15px;
     background: linear-gradient(45deg, white, #B2B2B2);
 }
 
 .resume-button img, .linkedin-icon img, .github-icon img {
     transition: all 0.2s ease;
-    width: 5em;
-    height: 5em;
-    margin: 0.5em;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.5rem;
 }
 
 .resume-button img:hover, .linkedin-icon img:hover, .github-icon img:hover {
     transition: all 0.2s ease;
-    width: 5.5em;
-    height: 5.5em;
+    width: 4.5rem;
+    height: 4.5rem;
 }
 
 .resume-button img:active, .linkedin-icon img:active, .github-icon img:active {
     transition: all 0.2s ease;
-    width: 5em;
-    height: 5em;
+    width: 4rem;
+    height: 4rem;
+}
+
+
+/* ===========================================*/
+/* MEDIA QUERIES */
+
+/* (phones, 800px and down) */
+@media (max-width: 1200px) {
+    .resume-button img, .linkedin-icon img, .github-icon img {
+        width: 3rem;
+        height: 3rem;
+        margin: 0.5rem;
+    }
+    
+    .resume-button img:hover, .linkedin-icon img:hover, .github-icon img:hover {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    
+    .resume-button img:active, .linkedin-icon img:active, .github-icon img:active {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* (phones, 350px and down) */
+@media (max-width: 350px) {
+    .resume-button, .linkedin-icon, .github-icon {
+        margin: 0.5rem;
+    }
+
+    .resume-button img, .linkedin-icon img, .github-icon img {
+        width: 2rem;
+        height: 2rem;
+        margin: 0.5rem;
+    }
+    
+    .resume-button img:hover, .linkedin-icon img:hover, .github-icon img:hover {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .resume-button img:active, .linkedin-icon img:active, .github-icon img:active {
+        width: 2rem;
+        height: 2rem;
+    }
 }

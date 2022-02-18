@@ -1,17 +1,15 @@
 .about-section {
-    color: black;
-    width: 80%;
-    margin: 2vh auto;
+    transition: all 0.5s ease;
+    color: white;
+    width: 60%;
+    margin: 1rem auto;
     padding: 2em;
     border-radius: 15px;
-    box-shadow: 0px 5px 22px #1A2253;
-    background: linear-gradient(122deg, white, #C9C9C9);
+    background-color: rgb(34, 34, 34, 0.5);
     transition-property: padding, border-radius, box-shadow;
-    transition-duration: 0.2s;
-    transition-timing-function: ease;
     opacity: 0;
     animation: slidein 1s ease forwards;
-    animation-delay: 5s;
+    animation-delay: 3s;
 }
 
 @keyframes slidein {
@@ -24,14 +22,23 @@
 }
 
 .about-section > p {
-    text-align: justify;
-    font-size: 1.5em;
+    text-align: center;
 }
 
 .about-section:hover {
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
+    width: 58%;
     border-radius: 25px;
     box-shadow: 0px 2px 12px #1A2253;
-    background: linear-gradient(122deg, white, #C2C2C2);
-    padding: 2.5em;
+}
+
+/*=====================================*/
+/* MEDIA QUERIES */
+
+/* (phones, 800 and down) */
+@media (max-width: 800px) {
+    .about-section {
+        width: 80%;
+        padding: 1em;
+    }
 }

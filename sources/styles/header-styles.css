@@ -1,13 +1,18 @@
 header {
     position: relative;
-    display: block;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     top: 0;
     left: 0;
     right: 0;
-    padding: 10vw;
+    padding: 10vw 0;
+    margin: auto;
     text-align: center;
     color: white;
+    overflow: hidden;
 }
 
 h1.first {
@@ -16,6 +21,7 @@ h1.first {
     border-right: 4px solid;
     width: 17ch;
     opacity: 0;
+    border-radius: 5px;
     animation: typing 1s steps(17), blink 1s steps(18) forwards;
     overflow: hidden;
 }
@@ -24,8 +30,9 @@ h2.first {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 26ch;
+    width: 28ch;
     opacity: 0;
+    border-radius: 5px;
     animation: typing 1s steps(27), blink 1s steps(28) forwards;
     animation-delay: 1s;
     overflow: hidden;
@@ -35,20 +42,203 @@ h3.first {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 17ch;
+    width: 22ch;
     opacity: 0;
-    animation: typing 1s steps(17), blink 1s steps(18) forwards;
+    border-radius: 5px;
+    animation: typing 1s steps(22), blink 1s steps(23) forwards;
     animation-delay: 2s;
     overflow: hidden;
 }
 
 @keyframes typing {
-    from { width: 0; }
+    from {
+        width: 0;
+    }
 }
 
 @keyframes blink {
-    100% { 
-        border-color: transparent; 
+    100% {
+        border-color: transparent;
         opacity: 1;
+    }
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 150vw;
+    height: 150vh;
+    display: grid;
+    gap: 0;
+    align-items: center;
+    opacity: 0;
+    animation: background-animation 30s ease infinite alternate, slidein 5s ease 5s forwards;
+}
+
+@keyframes slidein {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes background-animation {
+    0% {
+        transform: translate(0%, 0%)
+    }
+
+    100% {
+        transform: translate(-10%, -20%);
+    }
+}
+
+.background-icon {
+    transition: all 0.2s ease;
+    margin: auto;
+    width: 25%;
+    user-select: none;
+    cursor: pointer;
+    transform: rotateZ(10deg);
+}
+
+.background-icon:hover {
+    width: 24%;
+    padding: 1em;
+    transform: rotateZ(15deg);
+}
+
+.icon-1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.icon-2 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+.icon-3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.icon-4 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.icon-5 {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+}
+
+.icon-6 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.icon-7 {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+}
+
+.icon-8 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.icon-9 {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+
+.icon-10 {
+    grid-column: 5 / 6;
+    grid-row: 4 / 5;
+}
+
+.icon-11 {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+
+.icon-12 {
+    grid-column: 4 / 5;
+    grid-row: 5 / 6;
+}
+
+.icon-13 {
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+}
+
+.icon-14 {
+    grid-column: 3 / 4;
+    grid-row: 6 / 7;
+}
+
+.icon-15 {
+    grid-column: 5 / 6;
+    grid-row: 6 / 7;
+}
+
+.icon-16 {
+    grid-column: 2 / 3;
+    grid-row: 7 / 8;
+}
+
+.icon-17 {
+    grid-column: 4 / 5;
+    grid-row: 7 / 8;
+}
+
+.icon-18 {
+    grid-column: 1 / 2;
+    grid-row: 8 / 9;
+}
+
+.icon-19 {
+    grid-column: 3 / 4;
+    grid-row: 8 / 9;
+}
+
+.icon-20 {
+    grid-column: 5 / 6;
+    grid-row: 8 / 9;
+}
+
+
+/* ===========================================*/
+/* MEDIA QUERIES */
+
+/* (phones, 800px and down) */
+@media all and (max-width: 1200px) {
+    header {
+        padding: 10em 0;
+    }
+
+    .background-icon {
+        width: 40%;
+    }
+
+    .background-icon:hover {
+        width: 39%;
+        padding: 1em;
+    }
+}
+
+@media all and (max-width: 800px) {
+    header {
+        padding: 5em 0 10em 0;
+    }
+
+    .background-icon {
+        width: 50%;
+    }
+
+    .background-icon:hover {
+        width: 49%;
+        padding: 1em;
     }
 }
