@@ -1,21 +1,36 @@
 header {
     position: relative;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: 0;
     top: 0;
     left: 0;
     right: 0;
-    padding: 10vw 0;
-    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    padding: 5rem 0rem;
     text-align: center;
     color: white;
     overflow: hidden;
 }
 
-h1.first {
+.portfolio-icon {
+    transition: all 0.2s ease;
+    position: relative;
+    width: 15%;
+    align-self: center;
+    opacity: 0;
+    animation: slidein 1s ease forwards;
+    animation-delay: 5s;
+}
+
+.portfolio-icon:hover {
+    transform: scale(1.2, 1.2) rotateX(-22deg) rotateY(22deg);
+}
+
+header > h1 {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
@@ -26,7 +41,7 @@ h1.first {
     overflow: hidden;
 }
 
-h2.first {
+header > h2 {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
@@ -38,7 +53,7 @@ h2.first {
     overflow: hidden;
 }
 
-h3.first {
+header > h3 {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
@@ -68,10 +83,11 @@ h3.first {
     top: 0;
     right: 0;
     left: 0;
-    width: 150vw;
-    height: 150vh;
+    width: 130vw;
+    height: 130vh;
+    transform: rotate(45deg);
     display: grid;
-    gap: 0;
+    gap: 1rem;
     align-items: center;
     opacity: 0;
     animation: background-animation 30s ease infinite alternate, slidein 5s ease 5s forwards;
@@ -89,121 +105,121 @@ h3.first {
     }
 
     100% {
-        transform: translate(-10%, -20%);
+        transform: translate(-20%, -5%);
     }
 }
 
 .background-icon {
     transition: all 0.2s ease;
     margin: auto;
-    width: 25%;
+    width: 50%;
     user-select: none;
-    cursor: pointer;
+    cursor: default;
     transform: rotateZ(10deg);
 }
 
 .background-icon:hover {
-    width: 24%;
+    width: 49%;
     padding: 1em;
     transform: rotateZ(15deg);
 }
 
-.icon-1 {
+.background-icon.icon-1 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 
-.icon-2 {
+.background-icon.icon-2 {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
 }
 
-.icon-3 {
+.background-icon.icon-3 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 }
 
-.icon-4 {
+.background-icon.icon-4 {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
 }
 
-.icon-5 {
+.background-icon.icon-5 {
     grid-column: 5 / 6;
     grid-row: 2 / 3;
 }
 
-.icon-6 {
+.background-icon.icon-6 {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
 
-.icon-7 {
+.background-icon.icon-7 {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
 }
 
-.icon-8 {
+.background-icon.icon-8 {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
 }
 
-.icon-9 {
+.background-icon.icon-9 {
     grid-column: 3 / 4;
     grid-row: 4 / 5;
 }
 
-.icon-10 {
+.background-icon.icon-10 {
     grid-column: 5 / 6;
     grid-row: 4 / 5;
 }
 
-.icon-11 {
+.background-icon.icon-11 {
     grid-column: 2 / 3;
     grid-row: 5 / 6;
 }
 
-.icon-12 {
+.background-icon.icon-12 {
     grid-column: 4 / 5;
     grid-row: 5 / 6;
 }
 
-.icon-13 {
+.background-icon.icon-13 {
     grid-column: 1 / 2;
     grid-row: 6 / 7;
 }
 
-.icon-14 {
+.background-icon.icon-14 {
     grid-column: 3 / 4;
     grid-row: 6 / 7;
 }
 
-.icon-15 {
+.background-icon.icon-15 {
     grid-column: 5 / 6;
     grid-row: 6 / 7;
 }
 
-.icon-16 {
+.background-icon.icon-16 {
     grid-column: 2 / 3;
     grid-row: 7 / 8;
 }
 
-.icon-17 {
+.background-icon.icon-17 {
     grid-column: 4 / 5;
     grid-row: 7 / 8;
 }
 
-.icon-18 {
+.background-icon.icon-18 {
     grid-column: 1 / 2;
     grid-row: 8 / 9;
 }
 
-.icon-19 {
+.background-icon.icon-19 {
     grid-column: 3 / 4;
     grid-row: 8 / 9;
 }
 
-.icon-20 {
+.background-icon.icon-20 {
     grid-column: 5 / 6;
     grid-row: 8 / 9;
 }
@@ -212,33 +228,56 @@ h3.first {
 /* ===========================================*/
 /* MEDIA QUERIES */
 
-/* (phones, 800px and down) */
-@media all and (max-width: 1200px) {
-    header {
-        padding: 10em 0;
+/* (phones, 375px and up) */
+@media all and (min-width: 375px) {
+    .background-icon {
+        width: 45%;
+    }
+    
+    .background-icon:hover {
+        width: 44%;
+    }
+    
+}
+
+@media all and (min-width: 675px) {
+    .portfolio-icon {
+        width: 5%;
+    }
+
+    .header-background {
+        gap: 2rem;
     }
 
     .background-icon {
-        width: 40%;
+        width: 30%;
     }
-
+    
     .background-icon:hover {
-        width: 39%;
-        padding: 1em;
+        width: 29%;
     }
+    
 }
 
-@media all and (max-width: 800px) {
-    header {
-        padding: 5em 0 10em 0;
+/* (phones, 1200px and up) */
+@media all and (min-width: 1024px) {
+    .portfolio-icon {
+        width: 6%;
+    }
+
+    .header-background {
+        gap: 3rem;
     }
 
     .background-icon {
-        width: 50%;
+        width: 25%;
     }
-
+    
     .background-icon:hover {
-        width: 49%;
-        padding: 1em;
+        width: 24%;
     }
+    
 }
+
+/* END MEDIA QUERIES */
+/* ===========================================*/

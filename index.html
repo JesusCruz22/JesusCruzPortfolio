@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="sources/images/portfolio-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="sources/styles/glider.min.css" type="text/css">
     <link rel="stylesheet" href="sources/styles/styles.css" type="text/css">
     <link rel="stylesheet" href="sources/styles/button-styles.css" type="text/css">
     <link rel="stylesheet" href="sources/styles/nav-styles.css" type="text/css">
     <link rel="stylesheet" href="sources/styles/header-styles.css" type="text/css">
     <link rel="stylesheet" href="sources/styles/about-section-styles.css" type="text/css">
+    <link rel="stylesheet" href="sources/styles/skills-section-styles.css" type="text/css">
     <script src="sources/javascript/navFunctions.js" defer></script>
 
     <title>Jesus Cruz - Portfolio</title>
@@ -48,12 +51,15 @@
         </section>
         <!-- END BACKGROUND HEADER -->
 
+        <!-- NAVIGATION BAR -->
         <nav>
-            <a href="#" class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
+            <!-- 
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+            -->
             <ul class="nav-list">
                 <li class="nav-item active"><a href="#AboutMe">About Me</a></li>
                 <li class="nav-item"><a href="#Skills">Skills</a></li>
@@ -61,16 +67,24 @@
                 <li class="nav-item"><a href="#ContactMe">Contact Me</a></li>
             </ul>
         </nav>
+        <!-- END NAVIGATION BAR -->
 
-        <h1 class="first">Web Developer (</h1>
-        <h2 class="first"><q>Jesu&#769;s Oscar Ignacio Cruz</q>,</h2>
-        <h3 class="first">
+        <!-- HEADER TITLES -->
+        <!-- TITLES BACKGROUND -->
+        <img class="portfolio-icon" src="sources/images/portfolio-icon.png" alt="">
+        <!-- END TITLES BACKGROUND -->
+
+        <h1>Web Developer (</h1>
+        <h2><q>Jesu&#769;s Oscar Ignacio Cruz</q>,</h2>
+        <h3>
             <q>21 years old</q>,
             <img src="sources/images/flag-for-chile.png" title="Flag of Chile"
-                alt="Imagen pequeña de la bandera de Chile." style="width: 25px; height: auto;">
+                alt="Imagen pequeña de la bandera de Chile." style="width: 10%; height: auto;">
             );
         </h3>
+        <!-- END HEADER TITLES -->
 
+        <!-- SOCIAL HEADER BUTTONS SECTION -->
         <section class="buttons-section">
             <a class="resume-button" role="button" href="sources/Jesús Oscar Ignacio Cruz Cruz.pdf" target="_blank">
                 <img src="sources/images/cv.png" title="Resume CV" alt="Small image of resume">
@@ -83,11 +97,13 @@
                 <img src="sources/images/github-icon.png" title="GitHub Profile" alt="Go to my GitHub profile">
             </a>
         </section>
+        <!-- END SOCIAL HEADER BUTTONS SECTION -->
 
         <!-- ABOUT ME SECTION -->
         <section class="about-section">
             <!-- TITLE OF THE SECTION -->
             <h2>About Me</h2>
+            <!-- CONTENT -->
             <p>
                 I am a Junior Front-End Web Developer from Chile.
                 What I like the most about Web Development is the design of the user
@@ -101,34 +117,121 @@
                 I like videogames, movies and music.
             </p>
         </section>
+        <!-- END ABOUT ME SECTION -->
     </header>
+    <!-- END HEADER -->
 
+    <!-- MAIN CONTENT -->
     <main>
         <!-- SKILLS SECTION -->
-        <section class="skills-section">
+        <section id="Skills" class="skills-section">
+            <!-- SKILLS SECTION BACKGROUND -->
+            <section class="skills-background">
+                <img class="skills-background-icon icon-1" src="sources/images/html-icon-gris.svg">
+                <img class="skills-background-icon icon-2" src="sources/images/css3-icon-gris.svg">
+                <img class="skills-background-icon icon-3" src="sources/images/js-icon-gris.svg">
+                <img class="skills-background-icon icon-4" src="sources/images/react-icon-gris.svg">
+                <img class="skills-background-icon icon-5" src="sources/images/csharp-icon-gris.svg">
+                <img class="skills-background-icon icon-6" src="sources/images/unity-icon-gris.svg">
+                <img class="skills-background-icon icon-7" src="sources/images/database-icon-gris.svg">
+            </section>
+            <!-- END SKILLS SECTION BACKGROUND -->
+
             <!-- TITLE OF THE SECTION -->
-            <h2 id="Skills">Skills</h2>
-            <ul class="list">
-                <li class="list-item">
-                    HTML
-                    <img src="sources/images/html-icon.png" title="HTML" alt="HTML Icon"
-                        style="width: 30px; height: auto;">
-                </li>
-                <li class="list-item">
-                    CSS
-                    <img src="sources/images/css-icon.png" title="CSS" alt="HTML Icon"
-                        style="width: 30px; height: auto;">
-                </li>
-                <li class="list-item">
-                    JavaScript
-                    <img src="sources/images/js-icon.png" title="JavaScript" alt="HTML Icon"
-                        style="width: 30px; height: auto;">
-                </li>
-                <li class="list-item">React</li>
-                <li class="list-item">Java</li>
-                <li class="list-item">C#</li>
-                <li class="list-item">SQL</li>
-            </ul>
+            <h2>Skills</h2>
+            <!-- SKILLS COROUSEL -->
+            <div class="glider-contain">
+
+                <!-- SKILL LIST -->
+                <div class="glider skills">
+                    <!-- HTML CARD -->
+                    <section class="skill-card">
+                        <h3>HTML</h3>
+                        <img class="card-image" src="sources/images/html-icon.png" title="HTML" alt="HTML5 Icon">
+                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
+                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
+                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
+                    </section>
+                    <!-- END HTML CARD -->
+
+                    <!-- CSS CARD -->
+                    <section class="skill-card">
+                        <h3>CSS</h3>
+                        <img class="card-image" src="sources/images/css-icon.png" title="CSS" alt="CSS3 Icon">
+                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
+                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
+                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
+                    </section>
+                    <!-- END CSS CARD -->
+
+                    <!-- JAVASCRIPT CARD -->
+                    <section class="skill-card">
+                        <h3>JavaScript</h3>
+                        <img class="card-image" src="sources/images/js-icon.png" title="JavaScript"
+                            alt="JAVASCRIPT Icon">
+                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
+                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
+                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!
+                        </p>
+                    </section>
+                    <!-- END JAVASCRIPT CARD -->
+
+                    <!-- REACT CARD -->
+                    <section class="skill-card">
+                        <h3>ReactJS</h3>
+                        <img class="card-image" src="sources/images/react-icon.png" title="React JS" alt="REACT Icon">
+                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
+                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
+                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
+                    </section>
+                    <!-- END REACT CARD -->
+
+                    <!-- C# CARD -->
+                    <section class="skill-card">
+                        <h3>C#</h3>
+                        <img class="card-image" src="sources/images/csharp-icon.png" title="C#" alt="C# Icon">
+                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
+                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
+                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
+                    </section>
+                    <!-- END C# CARD -->
+
+                    <!-- UNITY CARD -->
+                    <section class="skill-card">
+                        <h3>Unity</h3>
+                        <img class="card-image" src="sources/images/unity-icon.png" title="Unity" alt="Unity Icon">
+                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
+                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
+                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
+                    </section>
+                    <!-- END UNITY CARD -->
+
+                    <!-- JAVA CARD -->
+                    <section class="skill-card">
+                        <h3>Java</h3>
+                        <img class="card-image" src="sources/images/java-icon.png" title="JAVA" alt="JAVA Icon">
+                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
+                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
+                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
+                    </section>
+                    <!-- END JAVA CARD -->
+                </div>
+                <!-- END SKILLS LIST -->
+
+                <!-- PREVIOUS BUTTON -->
+                <button aria-label="Previous skill-card" class="left-arrow-button">
+                    <img class="left-arrow-image" src="sources/images/left-arrow-icon.svg">
+                </button>
+                <!-- END PREVIOUS BUTTON -->
+
+                <!-- NEXT BUTTON -->
+                <button aria-label="Next skill-card" class="right-arrow-button">
+                    <img class="right-arrow-image" src="sources/images/right-arrow-icon.svg">
+                </button>
+                <!-- END NEXT BUTTON -->
+
+                <div role="tablist" class="skills-index"></div>
+            </div>
         </section>
 
         <!-- PROJECTS SECTION -->
@@ -145,9 +248,8 @@
                     <!-- PROJECT TITLE -->
                     <h4>First Project - Basic Calculator</h4>
                     <!-- SCREENSHOT OF THE PROJECT -->
-                    <img class="project-image" src="sources/images/basic-calculator.png"
-                        title="Basic Calculator - Project #1" alt="Image of the project Basic Calculator"
-                        style="width: 400px; height: auto;">
+                    <img class="project-image" src="" title="Basic Calculator - Project #1"
+                        alt="Image of the project Basic Calculator" style="width: 400px; height: auto;">
                     <figcaption>
                         Screenshoot of the project "Basic Calculator"
                     </figcaption>
@@ -192,9 +294,8 @@
                     <!-- PROJECT TITLE -->
                     <h4>First Project - Basic Calculator</h4>
                     <!-- SCREENSHOT OF THE PROJECT -->
-                    <img class="project-image" src="sources/images/basic-calculator.png"
-                        title="Basic Calculator - Project #1" alt="Image of the project Basic Calculator"
-                        style="width: 400px; height: auto;">
+                    <img class="project-image" src="" title="Basic Calculator - Project #1"
+                        alt="Image of the project Basic Calculator" style="width: 400px; height: auto;">
                     <figcaption>
                         Screenshoot of the project "Basic Calculator"
                     </figcaption>
@@ -245,6 +346,9 @@
             <img src="sources/images/github-icon.png" title="GitHub Profile" alt="Small image of resume">
         </a>
     </footer>
+
+    <script src="sources/javascript/glider.min.js"></script>
+    <script src="sources/javascript/skillsCorouselSystem.js"></script>
 </body>
 
 </html>
