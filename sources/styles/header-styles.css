@@ -23,18 +23,18 @@ header {
     align-self: center;
     opacity: 0;
     animation: slidein 1s ease forwards;
-    animation-delay: 5s;
+    animation-delay: .5s;
 }
 
 .portfolio-icon:hover {
-    transform: scale(1.2, 1.2) rotateX(-22deg) rotateY(22deg);
+    transform: scale(1.2, 1.2) rotateX(-22deg) rotateY(-10deg);
 }
 
 header > h1 {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 17ch;
+    width: 28ch;
     opacity: 0;
     border-radius: 5px;
     animation: typing 1s steps(17), blink 1s steps(18) forwards;

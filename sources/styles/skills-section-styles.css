@@ -2,38 +2,69 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     flex-flow: column;
     width: 100vw;
     height: 100vh;
-    padding: 15rem 4rem 10rem;
+    padding: 4rem 0 0;
     text-align: center;
     background: radial-gradient(circle,
             white,
             #F2F2F2,
             #D2D2D2,
             #B2B2B2,
-            #A2A2A2,
-            #B2B2B2,
-            #D2D2D2,
-            #F2F2F2,
-            white);
-    background-size: 800% 800%;
+            #A2A2A2);
+    background-size: 500% 500%;
     animation: gradient-background 50s ease infinite alternate;
     overflow: hidden;
 }
 
+.skills-section.html {
+    background: radial-gradient(circle, #FF5722, #E64C1E, #BF4019, #802A11);
+    background-size: 500% 500%;
+}
+
+.skills-section.css {
+    background: radial-gradient(circle, #249CFF, #2196F3, #1E85D9, #196DB3);
+    background-size: 500% 500%;
+}
+
+.skills-section.js {
+    background: radial-gradient(circle, #FFDF00, #E6C700, #BFA600, #806E00);
+    background-size: 500% 500%;
+}
+
+.skills-section.react {
+    background: radial-gradient(circle, #61DAFB, #58C3E0, #49A2BA, #306A7A);
+    background-size: 500% 500%;
+}
+
+.skills-section.csharp {
+    background: radial-gradient(circle, #A16EE0, #9867D4, #865BBA, #6A4894);
+    background-size: 500% 500%;
+}
+
+.skills-section.unity {
+    background: radial-gradient(circle, #D9D9D9, #999999, #595959, #4C4C4C);
+    background-size: 500% 500%;
+}
+
+.skills-section.java {
+    background: radial-gradient(circle, #7BC0ED, #5A8CAD, #5382A1, #466D87);
+    background-size: 500% 500%;
+}
+
 .skills-section>h2 {
     margin: 0;
-    margin-bottom: 3rem;
-    color: rgb(34, 34, 34, 0.5);
+    color: rgb(34, 34, 34, 0.8);
     text-shadow: none;
+    z-index: 1;
 }
 
 .right-arrow-button, .left-arrow-button {
-    margin: 2em;
-    width: 3rem;
-    height: 3rem;
+    margin: .5em;
+    width: 40px;
+    height: 40px;
     background-color: transparent;
     border: 0;
 }
@@ -47,11 +78,16 @@
     transform: scale(1.2, 1.2);
 }
 
+.right-arrow-image:active, .left-arrow-image:active {
+    transition: all 0.2s ease;
+    transform: scale(1, 1);
+}
+
 .skill-card {
     transition: all 0.2s ease;
     width: 100%;
     margin: 1.5em;
-    padding: 1rem;
+    padding: .5rem;
     border-radius: 10px;
     color: white;
     background-color: rgb(34, 34, 34, 0.5);
@@ -63,19 +99,74 @@
 }
 
 .card-image {
+    transition: all 0.2s ease;
     width: 50%;
     height: auto;
+}
+
+.card-image:hover {
+    width: 51%;
+}
+
+.xp-card-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 1rem;
+}
+
+.xp {
+    transition: all 0.2s ease;
+    width: fit-content;
+    margin: auto;
+}
+
+.xp:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.xp-title {
+    font-size: 1.5em;
+    font-weight: bolder;
+    padding: 0;
+    margin: 0;
+}
+
+.xp-image {
+    transition: all 0.2s ease;
+    width: 150px;
+    height: auto;
+}
+
+.xp-image:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.xp-projects {
+    transition: all 0.2s ease;
+    width: fit-content;
+    height: auto;
+    padding: 1rem;
+    margin: 1em auto;
+    font-weight: bold;
+    background-color: #2F2F2F5F;
+    border-radius: 10px;
+}
+
+.xp-projects:hover {
+    transform: scale(1.1, 1.1);
+    background-color: #2c2c2c;
+    border-radius: 5px;
 }
 
 .skills-background {
     position: absolute;
     top: 0;
-    right: 0;
-    left: 0;
+    margin: auto;
     width: 120vw;
     height: 100vh;
     display: grid;
-    gap: 5em;
+    gap: 0;
     align-items: center;
     opacity: 0;
     animation: skills-background-animation 30s ease infinite alternate, slidein 5s ease 5s forwards;
@@ -94,16 +185,15 @@
 .skills-background-icon {
     transition: all 0.2s ease;
     margin: 0 auto;
-    width: 25%;
+    width: 50%;
     user-select: none;
     cursor: pointer;
     transform: rotateZ(-22deg);
 }
 
 .skills-background-icon:hover {
-    width: 24%;
     padding: 1em;
-    transform: rotateZ(15deg);
+    transform: scale(.9) rotateZ(15deg);
 }
 
 .skills-background-icon.icon-1 {
@@ -146,22 +236,97 @@
     grid-row: 4 / 5;
 }
 
-.skills-background-icon.icon-9 {
-    grid-column: 3 / 4;
-    grid-row: 4 / 5;
+/* ======================================= */
+/* MEDIA QUIERIES */
+
+@media all and (min-width: 425px) {
+    .right-arrow-button, .left-arrow-button {
+        margin: 1em;
+        width: 41px;
+        height: 41px;
+    }
+
+    .skill-card {
+        padding: 1rem;
+    }
 }
 
-.skills-background-icon.icon-10 {
-    grid-column: 5 / 6;
-    grid-row: 4 / 5;
+@media all and (min-width: 525px) {
+    .right-arrow-button, .left-arrow-button {
+        margin: 1em;
+        width: 42px;
+        height: 42px;
+    }
+
+    .skill-card {
+        padding: 1rem;
+    }
 }
 
-.skills-background-icon.icon-11 {
-    grid-column: 2 / 3;
-    grid-row: 5 / 6;
+@media all and (min-width: 625px) {
+    .right-arrow-button, .left-arrow-button {
+        margin: 1em;
+        width: 43px;
+        height: 43px;
+    }
+
+    .skill-card {
+        padding: 1rem;
+    }
+
+    .skills-background-icon {
+        width: 40%;
+    }
 }
 
-.skills-background-icon.icon-12 {
-    grid-column: 4 / 5;
-    grid-row: 5 / 6;
+@media all and (min-width: 775px) {
+    .right-arrow-button, .left-arrow-button {
+        margin: 1em;
+        width: 44px;
+        height: 44px;
+    }
+
+    .skill-card {
+        padding: 1rem;
+    }
+
+    .skills-background-icon {
+        width: 30%;
+    }
 }
+
+@media all and (min-width: 825px) {
+    .right-arrow-button, .left-arrow-button {
+        margin: 1em;
+        width: 45px;
+        height: 45px;
+    }
+
+    .skill-card {
+        padding: 1rem;
+    }
+
+    .skills-background-icon {
+        width: 20%;
+    }
+}
+
+@media all and (min-width: 1225px) {
+    .right-arrow-button, .left-arrow-button {
+        margin: 1em;
+        width: 46px;
+        height: 46px;
+    }
+
+    .skill-card {
+        margin: 3em;
+        padding: 1rem;
+    }
+
+    .skills-background-icon {
+        width: 20%;
+    }
+}
+
+/* END MEDIA QUIERIES */
+/* ======================================= */

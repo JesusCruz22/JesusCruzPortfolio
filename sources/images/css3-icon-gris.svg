@@ -3,7 +3,7 @@
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#B2B2B2;}
+	.st0{opacity:0.5;}
 </style>
 <path class="st0" d="M256,0l-34.1,210.3L102.8,256L0,210.3l10.5-54.2h43.7l-4.3,23.2l62.1,25.4l71.5-25.4l10-55.5H15.7L24.3,77h178
 	l5.6-30.1H30L38.7,0H256L256,0z"/>

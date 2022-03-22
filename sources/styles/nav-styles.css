@@ -3,8 +3,8 @@ nav {
     opacity: 0;
     animation: slidein 1s ease forwards;
     animation-delay: 4s;
-    z-index: 1;
     cursor: pointer;
+    z-index: 1;
 }
 
 @keyframes slidein {
@@ -21,12 +21,12 @@ nav {
     left: 0;
     right: 0;
     margin: 0;
-    padding: .5em;
+    padding: .5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    align-content: center;
     background-color: rgb(34, 34, 34, 0.5);
 }
 
@@ -108,32 +108,32 @@ nav {
 /* (phones, 375px and up) */
 @media (min-width: 375px) {
     .nav-item a {
-        font-size: .7em;
-        padding: 1rem;
+        font-size: .6em;
+        padding: .5rem;
         border-radius: 10px;
     }
 }
 
 /* (phones, 675px and up) */
-@media (min-width: 675px) {
+@media (min-width: 975px) {
     .nav-list {
-        padding: 1rem 4rem;
+        padding: .5rem 4rem;
     }
 
     .nav-item a {
-        font-size: .8em;
+        font-size: .7em;
         padding: 1rem 2rem;
     }
 }
 
 /* (phones, 1024px and up) */
-@media (min-width: 1275px) {
+@media (min-width: 1375px) {
     .nav-list {
-        padding: 1rem 20rem;
+        padding: .5rem 25rem;
     }
 
     .nav-item a {
-        font-size: 1em;
+        font-size: .8em;
         padding: 1rem 2rem;
     }
 }

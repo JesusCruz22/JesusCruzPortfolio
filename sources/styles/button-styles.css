@@ -1,4 +1,4 @@
-.resume-button, .linkedin-icon, .github-icon {
+.resume-button, .linkedin-icon, .github-icon, .run-project-icon {
     display: inline-flex;
     align-items: center;
     margin: .5em;
@@ -16,33 +16,33 @@
     100% { opacity: 1; }
 }
 
-.resume-button:hover, .linkedin-icon:hover, .github-icon:hover {
+.resume-button:hover, .linkedin-icon:hover, .github-icon:hover, .run-project-icon:hover {
     transition: all 0.2s ease;
     transform: scale(1.1, 1.1);
     border-radius: 10px;
     background: linear-gradient(45deg, white, #F2F2F2);
 }
 
-.resume-button:active, .linkedin-icon:active, .github-icon:active {
+.resume-button:active, .linkedin-icon:active, .github-icon:active, .run-project-icon:active {
     transition: all 0.2s ease;
     border-radius: 15px;
 
     background: linear-gradient(45deg, white, #B2B2B2);
 }
 
-.resume-button img, .linkedin-icon img, .github-icon img {
+.resume-button img, .linkedin-icon img, .github-icon img, .run-project-icon img {
     transition: all 0.2s ease;
     width: 2rem;
     height: 2rem;
     margin: 0.5rem;
 }
 
-.resume-button img:hover, .linkedin-icon img:hover, .github-icon img:hover {
+.resume-button img:hover, .linkedin-icon img:hover, .github-icon img:hover, .run-project-icon img:hover {
     transition: all 0.2s ease;
     transform: scale(1.1, 1.1);
 }
 
-.resume-button img:active, .linkedin-icon img:active, .github-icon img:active {
+.resume-button img:active, .linkedin-icon img:active, .github-icon img:active, .run-project-icon img:active {
     transition: all 0.2s ease;
     transform: scale(1 , 1);
 }
@@ -51,13 +51,13 @@
 /* ===========================================*/
 /* MEDIA QUERIES */
 
-/* (phones, 375px and up) */
+/* (phones, 675px and up) */
 @media (min-width: 675px) {
-    .resume-button, .linkedin-icon, .github-icon {
-        margin: 0.5rem;
+    .resume-button, .linkedin-icon, .github-icon, .run-project-icon {
+        margin: 2em .5em;
     }
 
-    .resume-button img, .linkedin-icon img, .github-icon img {
+    .resume-button img, .linkedin-icon img, .github-icon img, .run-project-icon img {
         width: 3rem;
         height: 3rem;
         margin: 0.5rem;

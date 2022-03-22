@@ -19,7 +19,21 @@ body {
             #3544A6);
     background-size: 400% 400%;
     animation: gradient-background 50s ease infinite alternate;
+    overflow: hidden;
+}
+
+.scroller {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
     overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
 }
 
 @keyframes gradient-background {
@@ -46,7 +60,7 @@ body {
 
 h1 {
     transition: all 0.2s ease;
-    font-weight: 700;
+    font-weight: bolder;
     font-size: 1em;
     text-shadow: 0px 5px 10px #1A2253;
     margin: .5em;
@@ -60,6 +74,7 @@ h1:hover {
 
 h2 {
     transition: all 0.2s ease;
+    font-weight: bold;
     font-size: .9em;
     text-shadow: 0px 5px 10px #1A2253;
     margin: .5em;
@@ -73,6 +88,7 @@ h2:hover {
 
 h3 {
     transition: all 0.2s ease;
+    font-weight: bold;
     font-size: .8em;
     text-shadow: 0px 5px 10px #1A2253;
     margin: .5em;
@@ -84,9 +100,23 @@ h3:hover {
     transform: scale(1.1, 1.1);
 }
 
+h4 {
+    transition: all 0.2s ease;
+    font-weight: bold;
+    font-size: .7em;
+    text-shadow: 0px 5px 10px #1A2253;
+    margin: .5em;
+    min-height: .7em;
+}
+
+h4:hover {
+    transition: all 0.2s ease;
+    transform: scale(1.1, 1.1);
+}
+
 p {
     transition: all 0.2s ease;
-    font-size: .7em;
+    font-size: .6em;
     margin: .5em;
 }
 
@@ -122,8 +152,9 @@ footer {
         min-height: .9em;
     }
 
-    p {
-        font-size: .7em;
+    h4 {
+        font-size: .8em;
+        min-height: .8em;
     }
 }
 
@@ -144,13 +175,22 @@ footer {
         min-height: 1em;
     }
 
+    h4 {
+        font-size: .9em;
+        min-height: .9em;
+    }
+
     p {
-        font-size: .7em;
+        font-size: .8em;
     }
 }
 
 /* (phones, 675 and up) */
 @media all and (min-width: 675px) {
+    body {
+        background-size: 800% 800%;
+    }
+
     h1 {
         font-size: 1.3em;
         min-height: 1.3em;
@@ -166,35 +206,45 @@ footer {
         min-height: 1.1em;
     }
 
-    p {
-        font-size: .8em;
+    h4 {
+        font-size: 1em;
+        min-height: 1em;
     }
 }
 
 /* (phones, 1024 and up) */
 @media all and (min-width: 825) {
+    body {
+        background-size: 800% 800%;
+    }
+
     h1 {
         font-size: 1.4em;
         min-height: 1.4em;
     }
 
     h2 {
-        font-size: 1.4em;
-        min-height: 1.4em;
-    }
-
-    h3 {
         font-size: 1.3em;
         min-height: 1.3em;
     }
 
-    p {
-        font-size: .9em;
+    h3 {
+        font-size: 1.2em;
+        min-height: 1.2em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+        min-height: 1.1em;
     }
 }
 
 /* (phones, 1024 and up) */
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1125px) {
+    body {
+        background-size: 800% 800%;
+    }
+
     h1 {
         font-size: 1.5em;
         min-height: 1.5em;
@@ -210,7 +260,8 @@ footer {
         min-height: 1.3em;
     }
 
-    p {
-        font-size: .9em;
+    h4 {
+        font-size: 1.2em;
+        min-height: 1.2em;
     }
 }

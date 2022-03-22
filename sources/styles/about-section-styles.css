@@ -2,7 +2,7 @@
     transition: all 0.5s ease;
     color: white;
     width: 90%;
-    margin: .5em;
+    margin: 0;
     padding: .5rem;
     border-radius: 15px;
     background-color: rgb(34, 34, 34, 0.5);
@@ -34,12 +34,14 @@
 @media all and (min-width: 675px) {
     .about-section {
         width: 80%;
+        margin: .5em;
     }
 }
 
 @media all and (min-width: 1024px) {
     .about-section {
         width: 70%;
+        margin: .5em;
     }
 }
 

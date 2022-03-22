@@ -13,118 +13,130 @@
         rel="stylesheet">
     <link rel="stylesheet" href="sources/styles/glider.min.css" type="text/css">
     <link rel="stylesheet" href="sources/styles/styles.css" type="text/css">
+    <link rel="stylesheet" href="sources/styles/scroll-bar-styles.css" type="text/css">
     <link rel="stylesheet" href="sources/styles/button-styles.css" type="text/css">
     <link rel="stylesheet" href="sources/styles/nav-styles.css" type="text/css">
     <link rel="stylesheet" href="sources/styles/header-styles.css" type="text/css">
     <link rel="stylesheet" href="sources/styles/about-section-styles.css" type="text/css">
     <link rel="stylesheet" href="sources/styles/skills-section-styles.css" type="text/css">
+    <link rel="stylesheet" href="sources/styles/projects-section-styles.css" type="text/css">
+    <link rel="stylesheet" href="sources/styles/footer-styles.css" type="text/css">
     <script src="sources/javascript/navFunctions.js" defer></script>
 
     <title>Jesus Cruz - Portfolio</title>
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header id="AboutMe">
-        <!-- BACKGROUND HEADER -->
-        <section class="header-background">
-            <img class="background-icon icon-1" src="sources/images/html-icon.svg">
-            <img class="background-icon icon-2" src="sources/images/crosser-control-icon.svg">
-            <img class="background-icon icon-3" src="sources/images/css3-icon.svg">
-            <img class="background-icon icon-4" src="sources/images/js-icon.svg">
-            <img class="background-icon icon-5" src="sources/images/react-icon.svg">
-            <img class="background-icon icon-6" src="sources/images/database-icon.svg">
-            <img class="background-icon icon-7" src="sources/images/world-icon.svg">
-            <img class="background-icon icon-8" src="sources/images/csharp-icon.svg">
-            <img class="background-icon icon-9" src="sources/images/crosser-control-icon.svg">
-            <img class="background-icon icon-10" src="sources/images/unity-icon.svg">
-            <img class="background-icon icon-20" src="sources/images/html-icon.svg">
-            <img class="background-icon icon-19" src="sources/images/crosser-control-icon.svg">
-            <img class="background-icon icon-18" src="sources/images/css3-icon.svg">
-            <img class="background-icon icon-17" src="sources/images/js-icon.svg">
-            <img class="background-icon icon-16" src="sources/images/react-icon.svg">
-            <img class="background-icon icon-15" src="sources/images/world-icon.svg">
-            <img class="background-icon icon-14" src="sources/images/film-icon.svg">
-            <img class="background-icon icon-13" src="sources/images/plane-icon.svg">
-            <img class="background-icon icon-12" src="sources/images/music-icon.svg">
-            <img class="background-icon icon-11" src="sources/images/unity-icon.svg">
-        </section>
-        <!-- END BACKGROUND HEADER -->
+    <article id="Scroller" class="scroller">
+        <!-- HEADER -->
+        <header id="AboutMe" class="header-section section">
+            <!-- BACKGROUND HEADER -->
+            <section class="header-background">
+                <img class="background-icon icon-1" src="sources/images/html-icon.svg">
+                <img class="background-icon icon-2" src="sources/images/crosser-control-icon.svg">
+                <img class="background-icon icon-3" src="sources/images/css3-icon.svg">
+                <img class="background-icon icon-4" src="sources/images/js-icon.svg">
+                <img class="background-icon icon-5" src="sources/images/react-icon.svg">
+                <img class="background-icon icon-6" src="sources/images/database-icon.svg">
+                <img class="background-icon icon-7" src="sources/images/world-icon.svg">
+                <img class="background-icon icon-8" src="sources/images/csharp-icon.svg">
+                <img class="background-icon icon-9" src="sources/images/crosser-control-icon.svg">
+                <img class="background-icon icon-10" src="sources/images/unity-icon.svg">
+                <img class="background-icon icon-20" src="sources/images/html-icon.svg">
+                <img class="background-icon icon-19" src="sources/images/crosser-control-icon.svg">
+                <img class="background-icon icon-18" src="sources/images/css3-icon.svg">
+                <img class="background-icon icon-17" src="sources/images/js-icon.svg">
+                <img class="background-icon icon-16" src="sources/images/react-icon.svg">
+                <img class="background-icon icon-15" src="sources/images/world-icon.svg">
+                <img class="background-icon icon-14" src="sources/images/film-icon.svg">
+                <img class="background-icon icon-13" src="sources/images/plane-icon.svg">
+                <img class="background-icon icon-12" src="sources/images/music-icon.svg">
+                <img class="background-icon icon-11" src="sources/images/unity-icon.svg">
+            </section>
+            <!-- END BACKGROUND HEADER -->
 
-        <!-- NAVIGATION BAR -->
-        <nav>
-            <!-- 
-                <a href="#" class="toggle-button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+            <!-- NAVIGATION BAR -->
+            <nav>
+                <ul class="nav-list">
+                    <li id="AboutMeNavBtn" class="nav-item active">
+                        <a id="AboutMeLink" href="#AboutMe">
+                            About Me
+                        </a>
+                    </li>
+                    <li id="SkillsNavBtn" class="nav-item">
+                        <a id="SkillsLink" href="#Skills">
+                            Skills
+                        </a>
+                    </li>
+                    <li id="ProjectsNavBtn" class="nav-item">
+                        <a id="ProjectsLink" href="#Projects">
+                            Projects
+                        </a>
+                    </li>
+                    <li id="ContactMeNavBtn" class="nav-item">
+                        <a id="ContactMeLink" href="#ContactMe">
+                            Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- END NAVIGATION BAR -->
+
+            <!-- HEADER TITLES -->
+            <!-- TITLES BACKGROUND -->
+            <img class="portfolio-icon" src="sources/images/portfolio-icon.png" alt="">
+            <!-- END TITLES BACKGROUND -->
+
+            <h1>Web Developer (</h1>
+            <h2><q>Jesu&#769;s Oscar Ignacio Cruz</q>,</h2>
+            <h3>
+                <q>21 years old</q>,
+                <img src="sources/images/flag-for-chile.png" title="Flag of Chile"
+                    alt="Imagen pequeña de la bandera de Chile." style="width: 10%; height: auto;">
+                );
+            </h3>
+            <!-- END HEADER TITLES -->
+
+            <!-- SOCIAL HEADER BUTTONS SECTION -->
+            <section class="buttons-section">
+                <a class="resume-button" role="button" href="sources/Jesús Oscar Ignacio Cruz Cruz.pdf" target="_blank">
+                    <img src="sources/images/cv.png" title="Resume CV" alt="Small image of resume">
                 </a>
-            -->
-            <ul class="nav-list">
-                <li class="nav-item active"><a href="#AboutMe">About Me</a></li>
-                <li class="nav-item"><a href="#Skills">Skills</a></li>
-                <li class="nav-item"><a href="#Projects">Projects</a></li>
-                <li class="nav-item"><a href="#ContactMe">Contact Me</a></li>
-            </ul>
-        </nav>
-        <!-- END NAVIGATION BAR -->
+                <a class="linkedin-icon" role="button" href="https://www.linkedin.com/in/jesus-cruz-5a03b81b5"
+                    target="_blank">
+                    <img src="sources/images/linkedin-icon.png" title="LinkedIn Profile"
+                        alt="Go to my LinkedIn profile">
+                </a>
+                <a class="github-icon" role="button" href="https://github.com/JesusCruz22" target="_blank">
+                    <img src="sources/images/github-icon.png" title="GitHub Profile" alt="Go to my GitHub profile">
+                </a>
+            </section>
+            <!-- END SOCIAL HEADER BUTTONS SECTION -->
 
-        <!-- HEADER TITLES -->
-        <!-- TITLES BACKGROUND -->
-        <img class="portfolio-icon" src="sources/images/portfolio-icon.png" alt="">
-        <!-- END TITLES BACKGROUND -->
+            <!-- ABOUT ME SECTION -->
+            <section class="about-section">
+                <!-- TITLE OF THE SECTION -->
+                <h2>About Me</h2>
+                <!-- CONTENT -->
+                <p>
+                    I am a Junior Front-End Web Developer from Chile.
+                    What I like the most about Web Development is the design of the user
+                    interface and the user experience,<br>
+                    I always try to do my best and show my skills with the web technologies
+                    that I know.<br>
+                    I am dispose to learn new topics, technologies and techniques
+                    to improve my professional career.<br>
+                    <br>
+                    Indie Game Development is another topic that I like to learn.
+                    I like videogames, movies and music.
+                </p>
+            </section>
+            <!-- END ABOUT ME SECTION -->
+        </header>
+        <!-- END HEADER -->
 
-        <h1>Web Developer (</h1>
-        <h2><q>Jesu&#769;s Oscar Ignacio Cruz</q>,</h2>
-        <h3>
-            <q>21 years old</q>,
-            <img src="sources/images/flag-for-chile.png" title="Flag of Chile"
-                alt="Imagen pequeña de la bandera de Chile." style="width: 10%; height: auto;">
-            );
-        </h3>
-        <!-- END HEADER TITLES -->
-
-        <!-- SOCIAL HEADER BUTTONS SECTION -->
-        <section class="buttons-section">
-            <a class="resume-button" role="button" href="sources/Jesús Oscar Ignacio Cruz Cruz.pdf" target="_blank">
-                <img src="sources/images/cv.png" title="Resume CV" alt="Small image of resume">
-            </a>
-            <a class="linkedin-icon" role="button" href="https://www.linkedin.com/in/jesus-cruz-5a03b81b5"
-                target="_blank">
-                <img src="sources/images/linkedin-icon.png" title="LinkedIn Profile" alt="Go to my LinkedIn profile">
-            </a>
-            <a class="github-icon" role="button" href="https://github.com/JesusCruz22" target="_blank">
-                <img src="sources/images/github-icon.png" title="GitHub Profile" alt="Go to my GitHub profile">
-            </a>
-        </section>
-        <!-- END SOCIAL HEADER BUTTONS SECTION -->
-
-        <!-- ABOUT ME SECTION -->
-        <section class="about-section">
-            <!-- TITLE OF THE SECTION -->
-            <h2>About Me</h2>
-            <!-- CONTENT -->
-            <p>
-                I am a Junior Front-End Web Developer from Chile.
-                What I like the most about Web Development is the design of the user
-                interface and the user experience,<br>
-                I always try to do my best and show my skills with the web technologies
-                that I know.<br>
-                I am dispose to learn new topics, technologies and techniques
-                to improve my professional career.<br>
-                <br>
-                Indie Game Development is another topic that I like to learn.
-                I like videogames, movies and music.
-            </p>
-        </section>
-        <!-- END ABOUT ME SECTION -->
-    </header>
-    <!-- END HEADER -->
-
-    <!-- MAIN CONTENT -->
-    <main>
         <!-- SKILLS SECTION -->
-        <section id="Skills" class="skills-section">
+        <section id="Skills" class="skills-section section">
             <!-- SKILLS SECTION BACKGROUND -->
             <section class="skills-background">
                 <img class="skills-background-icon icon-1" src="sources/images/html-icon-gris.svg">
@@ -133,222 +145,342 @@
                 <img class="skills-background-icon icon-4" src="sources/images/react-icon-gris.svg">
                 <img class="skills-background-icon icon-5" src="sources/images/csharp-icon-gris.svg">
                 <img class="skills-background-icon icon-6" src="sources/images/unity-icon-gris.svg">
-                <img class="skills-background-icon icon-7" src="sources/images/database-icon-gris.svg">
+                <img class="skills-background-icon icon-7" src="sources/images/java-icon-gris.svg">
+                <img class="skills-background-icon icon-8" src="sources/images/database-icon-gris.svg">
             </section>
             <!-- END SKILLS SECTION BACKGROUND -->
 
             <!-- TITLE OF THE SECTION -->
             <h2>Skills</h2>
             <!-- SKILLS COROUSEL -->
-            <div class="glider-contain">
+            <section class="glider-contain">
 
                 <!-- SKILL LIST -->
-                <div class="glider skills">
+                <section class="glider skills">
                     <!-- HTML CARD -->
-                    <section class="skill-card">
+                    <article id="htmlCard" class="skill-card" onmouseover="setBackgroundStyle(this.id)"
+                        onmouseout="setDefaultBackground()">
                         <h3>HTML</h3>
                         <img class="card-image" src="sources/images/html-icon.png" title="HTML" alt="HTML5 Icon">
-                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
-                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
-                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
-                    </section>
+
+                        <div class="xp-card-section">
+                            <div class="xp">
+                                <p class="xp-title">XP</p>
+                                <p class="xp-porcent">100%</p>
+                                <img class="xp-image" src="sources/images/xp-100.png">
+                            </div>
+                            <p class="xp-projects">USED IN 5 PROJECTS</p>
+                        </div>
+                    </article>
                     <!-- END HTML CARD -->
 
                     <!-- CSS CARD -->
-                    <section class="skill-card">
+                    <article id="cssCard" class="skill-card" onmouseover="setBackgroundStyle(this.id)"
+                        onmouseout="setDefaultBackground()">
                         <h3>CSS</h3>
                         <img class="card-image" src="sources/images/css-icon.png" title="CSS" alt="CSS3 Icon">
-                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
-                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
-                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
-                    </section>
+
+                        <div class="xp-card-section">
+                            <div class="xp">
+                                <p class="xp-title">XP</p>
+                                <p class="xp-porcent">100%</p>
+                                <img class="xp-image" src="sources/images/xp-100.png">
+                            </div>
+                            <p class="xp-projects">USED IN 5 PROJECTS</p>
+                        </div>
+                    </article>
                     <!-- END CSS CARD -->
 
                     <!-- JAVASCRIPT CARD -->
-                    <section class="skill-card">
+                    <article id="jsCard" class="skill-card" onmouseover="setBackgroundStyle(this.id)"
+                        onmouseout="setDefaultBackground()">
                         <h3>JavaScript</h3>
                         <img class="card-image" src="sources/images/js-icon.png" title="JavaScript"
                             alt="JAVASCRIPT Icon">
-                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
-                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
-                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!
-                        </p>
-                    </section>
+
+                        <div class="xp-card-section">
+                            <div class="xp">
+                                <p class="xp-title">XP</p>
+                                <p class="xp-porcent">25%</p>
+                                <img class="xp-image" src="sources/images/xp-25.png">
+                            </div>
+                            <p class="xp-projects">USED IN 5 PROJECTS</p>
+                        </div>
+                    </article>
                     <!-- END JAVASCRIPT CARD -->
 
                     <!-- REACT CARD -->
-                    <section class="skill-card">
+                    <article id="reactCard" class="skill-card" onmouseover="setBackgroundStyle(this.id)"
+                        onmouseout="setDefaultBackground()">
                         <h3>ReactJS</h3>
                         <img class="card-image" src="sources/images/react-icon.png" title="React JS" alt="REACT Icon">
-                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
-                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
-                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
-                    </section>
+                        <div class="xp-card-section">
+                            <div class="xp">
+                                <p class="xp-title">XP</p>
+                                <p class="xp-porcent">0%</p>
+                                <img class="xp-image" src="sources/images/xp-0.png">
+                            </div>
+                            <p class="xp-projects">USED IN 0 PROJECTS</p>
+                        </div>
+                    </article>
                     <!-- END REACT CARD -->
 
                     <!-- C# CARD -->
-                    <section class="skill-card">
+                    <article id="csharpCard" class="skill-card" onmouseover="setBackgroundStyle(this.id)"
+                        onmouseout="setDefaultBackground()">
                         <h3>C#</h3>
                         <img class="card-image" src="sources/images/csharp-icon.png" title="C#" alt="C# Icon">
-                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
-                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
-                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
-                    </section>
+
+                        <div class="xp-card-section">
+                            <div class="xp">
+                                <p class="xp-title">XP</p>
+                                <p class="xp-porcent">50%</p>
+                                <img class="xp-image" src="sources/images/xp-50.png">
+                            </div>
+                            <p class="xp-projects">USED IN 1 PROJECTS</p>
+                        </div>
+                    </article>
                     <!-- END C# CARD -->
 
                     <!-- UNITY CARD -->
-                    <section class="skill-card">
+                    <article id="unityCard" class="skill-card" onmouseover="setBackgroundStyle(this.id)"
+                        onmouseout="setDefaultBackground()">
                         <h3>Unity</h3>
                         <img class="card-image" src="sources/images/unity-icon.png" title="Unity" alt="Unity Icon">
-                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
-                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
-                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
-                    </section>
+
+                        <div class="xp-card-section">
+                            <div class="xp">
+                                <p class="xp-title">XP</p>
+                                <p class="xp-porcent">25%</p>
+                                <img class="xp-image" src="sources/images/xp-25.png">
+                            </div>
+                            <p class="xp-projects">USED IN 1 PROJECTS</p>
+                        </div>
+                    </article>
                     <!-- END UNITY CARD -->
 
                     <!-- JAVA CARD -->
-                    <section class="skill-card">
+                    <article id="javaCard" class="skill-card" onmouseover="setBackgroundStyle(this.id)"
+                        onmouseout="setDefaultBackground()">
                         <h3>Java</h3>
                         <img class="card-image" src="sources/images/java-icon.png" title="JAVA" alt="JAVA Icon">
-                        <p class="card-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
-                            illo error illum, voluptates qui explicabo repellat asperiores, blanditiis fugiat ut et?
-                            Iure impedit odit soluta. Similique facere aperiam veniam suscipit!</p>
-                    </section>
+
+                        <div class="xp-card-section">
+                            <div class="xp">
+                                <p class="xp-title">XP</p>
+                                <p class="xp-porcent">50%</p>
+                                <img class="xp-image" src="sources/images/xp-50.png">
+                            </div>
+                            <p class="xp-projects">USED IN 1 PROJECTS</p>
+                        </div>
+                    </article>
                     <!-- END JAVA CARD -->
-                </div>
+                </section>
                 <!-- END SKILLS LIST -->
 
                 <!-- PREVIOUS BUTTON -->
-                <button aria-label="Previous skill-card" class="left-arrow-button">
+                <button aria-label="Previous skill-card" class="left-arrow-button skills">
                     <img class="left-arrow-image" src="sources/images/left-arrow-icon.svg">
                 </button>
                 <!-- END PREVIOUS BUTTON -->
 
                 <!-- NEXT BUTTON -->
-                <button aria-label="Next skill-card" class="right-arrow-button">
+                <button aria-label="Next skill-card" class="right-arrow-button skills">
                     <img class="right-arrow-image" src="sources/images/right-arrow-icon.svg">
                 </button>
                 <!-- END NEXT BUTTON -->
 
                 <div role="tablist" class="skills-index"></div>
-            </div>
+            </section>
         </section>
+        <!-- END SKILLS SECTION -->
 
         <!-- PROJECTS SECTION -->
-        <section class="projects-section">
+        <section id="Projects" class="projects-section section">
             <!-- TITLE OF THE SECTION -->
-            <h2 id="Projects">Projects</h2>
+            <h2>Projects</h2>
 
-            <!-- SUBTITLE OF THE SECTION -->
-            <h3 id="Timeline">Chronology of the projects that I carried out:</h3>
+            <section class="glider-contain">
+                <section class="glider projects">
 
-            <!-- PROJECT ARTICLE: BASIC CALCULATOR -->
-            <article class="project-article">
-                <figure>
-                    <!-- PROJECT TITLE -->
-                    <h4>First Project - Basic Calculator</h4>
-                    <!-- SCREENSHOT OF THE PROJECT -->
-                    <img class="project-image" src="" title="Basic Calculator - Project #1"
-                        alt="Image of the project Basic Calculator" style="width: 400px; height: auto;">
-                    <figcaption>
-                        Screenshoot of the project "Basic Calculator"
-                    </figcaption>
-                    <!-- DETAILS OF THE PROJECT -->
-                    <details>
-                        <summary>Details</summary>
-                        <ul class="list">
-                            <li class="list-item">My first project with HTML, CSS and Javascript.</li>
-                            <li class="list-item">Page without responsive design and unnecessarily long javascript code
-                            </li>
-                            <li class="list-item">Calculates addition, subtraction, division and multiplication between
-                                two numbers.</li>
-                            <li class="list-item">Allows whole numbers and decimals.</li>
-                        </ul>
-                    </details>
-                    <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                    <img class="project-icons" src="sources/images/html-icon.png" title="HTML" alt="HTML Icon"
-                        style="width: 30px; height: auto;">
-                    <img class="project-icons" src="sources/images/css-icon.png" title="CSS" alt="HTML Icon"
-                        style="width: 30px; height: auto;">
-                    <img class="project-icons" src="sources/images/js-icon.png" title="JavaScript" alt="HTML Icon"
-                        style="width: 30px; height: auto;">
-                    <!-- CODE BUTTON -->
-                    <a class="github-icon" role="button" href="https://github.com/JesusCruz22/Calculadora"
-                        target="_blank">
-                        <img class="project-icons" src="sources/images/github-icon.png" title="Github"
-                            alt="View code on GitHub" style="width: 25px; height: auto;">
-                        Code
-                    </a>
-                    <!-- RUN PROJECT BUTTON -->
-                    <a class="run-project-icon" role="button" href="projects/calculadora/index.html" target="_blank">
-                        <img class="project-icons" src="sources/images/link-icon.png" title="Run Project"
-                            alt="Open project in a new tab" style="width: 25px; height: auto;">
-                        Run Project
-                    </a>
-                </figure>
-            </article>
+                    <!-- PROJECT ARTICLE: BASIC CALCULATOR -->
+                    <article class="project-article">
+                        <figure>
+                            <section class="project-grid-container">
+                                <!-- PROJECT TITLE -->
+                                <h3>First Project - Basic Calculator</h3>
+                                <!-- END PROJECT TITLE -->
 
-            <!-- PROJECT ARTICLE: BASIC CALCULATOR V2 -->
-            <article class="project-article">
-                <figure>
-                    <!-- PROJECT TITLE -->
-                    <h4>First Project - Basic Calculator</h4>
-                    <!-- SCREENSHOT OF THE PROJECT -->
-                    <img class="project-image" src="" title="Basic Calculator - Project #1"
-                        alt="Image of the project Basic Calculator" style="width: 400px; height: auto;">
-                    <figcaption>
-                        Screenshoot of the project "Basic Calculator"
-                    </figcaption>
-                    <!-- DETAILS OF THE PROJECT -->
-                    <details>
-                        <summary>Details</summary>
-                        <ul class="list">
-                            <li class="list-item">My first project with HTML, CSS and Javascript.</li>
-                            <li class="list-item">Page without responsive design and unnecessarily long javascript code
-                            </li>
-                            <li class="list-item">Calculates addition, subtraction, division and multiplication between
-                                two numbers.</li>
-                            <li class="list-item">Allows whole numbers and decimals.</li>
-                        </ul>
-                    </details>
-                    <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                    <img class="project-icons" src="sources/images/html-icon.png" title="HTML" alt="HTML Icon"
-                        style="width: 30px; height: auto;">
-                    <img class="project-icons" src="sources/images/css-icon.png" title="CSS" alt="HTML Icon"
-                        style="width: 30px; height: auto;">
-                    <img class="project-icons" src="sources/images/js-icon.png" title="JavaScript" alt="HTML Icon"
-                        style="width: 30px; height: auto;">
-                    <!-- CODE BUTTON -->
-                    <a class="github-icon" role="button" href="https://github.com/JesusCruz22/Calculadora"
-                        target="_blank">
-                        <img class="project-icons" src="sources/images/github-icon.png" title="Github"
-                            alt="View code on GitHub" style="width: 25px; height: auto;">
-                        Code
-                    </a>
-                    <!-- RUN PROJECT BUTTON -->
-                    <a class="run-project-icon" role="button" href="projects/calculadora/index.html" target="_blank">
-                        <img class="project-icons" src="sources/images/link-icon.png" title="Run Project"
-                            alt="Open project in a new tab" style="width: 25px; height: auto;">
-                        Run Project
-                    </a>
-                </figure>
-            </article>
+                                <!-- SCREENSHOT OF THE PROJECT -->
+                                <video class="project-video" controls loop preload="auto">
+                                    <source src="sources/videos/Intro-Crosser-Games.mp4" type="video/mp4">
+                                </video>
+                                <!-- END SCREENSHOT OF THE PROJECT -->
+
+                                <section class="content-project-card">
+                                    <!-- DETAILS OF THE PROJECT -->
+                                    <section class="details-project-section">
+                                        <h4>Details</h4>
+                                        <p>
+                                            My first project with HTML, CSS and Javascript.
+                                            <br>
+                                            Page without responsive design and unnecessarily long
+                                            javascript code.
+                                            <br>
+                                            Calculates addition, subtraction, division and
+                                            multiplication between two numbers.
+                                            <br>
+                                            Allows integer and float values.
+                                        </p>
+                                    </section>
+                                    <!-- END DETAILS OF THE PROJECT -->
+
+                                    <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
+                                    <section class="project-tecnologies">
+                                        <img class="project-icons" src="sources/images/html-icon.png" title="HTML"
+                                            alt="HTML Icon">
+                                        <img class="project-icons" src="sources/images/css-icon.png" title="CSS"
+                                            alt="HTML Icon">
+                                        <img class="project-icons" src="sources/images/js-icon.png" title="JavaScript"
+                                            alt="HTML Icon">
+                                    </section>
+                                    <!--  END ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
+
+                                    <!-- BUTTONS SECTION -->
+                                    <section class="buttons-project-section">
+                                        <!-- CODE BUTTON -->
+                                        <a class="github-icon" role="button"
+                                            href="https://github.com/JesusCruz22/Calculadora" target="_blank">
+                                            <img class="project-icons" src="sources/images/github-icon.png"
+                                                title="Github" alt="View code on GitHub">
+                                            Code
+                                        </a>
+                                        <!-- RUN PROJECT BUTTON -->
+                                        <a class="run-project-icon" role="button" href="projects/calculadora/index.html"
+                                            target="_blank">
+                                            <img class="project-icons" src="sources/images/link-icon.png"
+                                                title="Run Project" alt="Open project in a new tab">
+                                            Run Project
+                                        </a>
+                                    </section>
+                                    <!-- END BUTTONS SECTION -->
+                                </section>
+                            </section>
+                        </figure>
+                    </article>
+                    <!-- END PROJECT ARTICLE: BASIC CALCULATOR -->
+
+
+                    <!-- PROJECT ARTICLE: BASIC CALCULATOR -->
+                    <article class="project-article">
+                        <figure>
+                            <section class="project-grid-container">
+                                <!-- PROJECT TITLE -->
+                                <h3>First Project - Basic Calculator</h3>
+                                <!-- END PROJECT TITLE -->
+                                
+                                <!-- SCREENSHOT OF THE PROJECT -->
+                                <video class="project-video" controls loop preload="auto">
+                                    <source src="sources/videos/Intro-Crosser-Games.mp4" type="video/mp4">
+                                </video>
+                                <!-- END SCREENSHOT OF THE PROJECT -->
+
+                                <section class="content-project-card">
+                                    <!-- DETAILS OF THE PROJECT -->
+                                    <section class="details-project-section">
+                                        <h4>Details</h4>
+                                        <p>
+                                            My first project with HTML, CSS and Javascript.
+                                            <br>
+                                            Page without responsive design and unnecessarily long
+                                            javascript code.
+                                            <br>
+                                            Calculates addition, subtraction, division and
+                                            multiplication between two numbers.
+                                            <br>
+                                            Allows integer and float values.
+                                        </p>
+                                    </section>
+                                    <!-- END DETAILS OF THE PROJECT -->
+
+                                    <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
+                                    <section class="project-tecnologies">
+                                        <img class="project-icons" src="sources/images/html-icon.png" title="HTML"
+                                            alt="HTML Icon">
+                                        <img class="project-icons" src="sources/images/css-icon.png" title="CSS"
+                                            alt="HTML Icon">
+                                        <img class="project-icons" src="sources/images/js-icon.png" title="JavaScript"
+                                            alt="HTML Icon">
+                                    </section>
+                                    <!--  END ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
+
+                                    <!-- BUTTONS SECTION -->
+                                    <section class="buttons-project-section">
+                                        <!-- CODE BUTTON -->
+                                        <a class="github-icon" role="button"
+                                            href="https://github.com/JesusCruz22/Calculadora" target="_blank">
+                                            <img class="project-icons" src="sources/images/github-icon.png"
+                                                title="Github" alt="View code on GitHub"
+                                                style="width: 25px; height: auto;">
+                                            Code
+                                        </a>
+                                        <!-- RUN PROJECT BUTTON -->
+                                        <a class="run-project-icon" role="button" href="projects/calculadora/index.html"
+                                            target="_blank">
+                                            <img class="project-icons" src="sources/images/link-icon.png"
+                                                title="Run Project" alt="Open project in a new tab"
+                                                style="width: 25px; height: auto;">
+                                            Run Project
+                                        </a>
+                                    </section>
+                                    <!-- END BUTTONS SECTION -->
+                                </section>
+                            </section>
+                        </figure>
+                    </article>
+                    <!-- END PROJECT ARTICLE: BASIC CALCULATOR -->
+
+                </section>
+
+
+                <!-- PREVIOUS BUTTON -->
+                <button aria-label="Previous project-card" class="left-arrow-button projects">
+                    <img class="left-arrow-image" src="sources/images/left-arrow-icon.svg">
+                </button>
+                <!-- END PREVIOUS BUTTON -->
+
+                <!-- NEXT BUTTON -->
+                <button aria-label="Next project-card" class="right-arrow-button projects">
+                    <img class="right-arrow-image" src="sources/images/right-arrow-icon.svg">
+                </button>
+                <!-- END NEXT BUTTON -->
+
+                <div role="tablist" class="projects-index"></div>
+
+            </section>
         </section>
-    </main>
+        <!-- END PROJECTS SECTION -->
 
-    <!-- FOOTER -->
-    <footer>
-        <h2 id="ContactMe">Contact me</h2>
-        <a class="linkedin-icon" role="button" href="https://www.linkedin.com/in/jesus-cruz-5a03b81b5" target="_blank">
-            <img src="sources/images/linkedin-icon.png" title="LinkedIn Profile" alt="Small image of resume">
-        </a>
-        <a class="github-icon" role="button" href="https://github.com/JesusCruz22" target="_blank">
-            <img src="sources/images/github-icon.png" title="GitHub Profile" alt="Small image of resume">
-        </a>
-    </footer>
+        <!-- FOOTER -->
+        <footer id="ContactMe" class="footer section">
+            <h2>Contact me</h2>
+            <section class="buttons-section">
+                <a class="linkedin-icon" role="button" href="https://www.linkedin.com/in/jesus-cruz-5a03b81b5"
+                    target="_blank">
+                    <img src="sources/images/linkedin-icon.png" title="LinkedIn Profile" alt="Small image of resume">
+                </a>
+                <a class="github-icon" role="button" href="https://github.com/JesusCruz22" target="_blank">
+                    <img src="sources/images/github-icon.png" title="GitHub Profile" alt="Small image of resume">
+                </a>
+            </section>
+        </footer>
+        <!-- END FOOTER -->
+    </article>
 
     <script src="sources/javascript/glider.min.js"></script>
-    <script src="sources/javascript/skillsCorouselSystem.js"></script>
+    <script src="sources/javascript/skillsCarouselSystem.js"></script>
+    <script src="sources/javascript/projectsCarouselSystem.js"></script>
+    <script src="sources/javascript/autoplayVideoSystem.js"></script>
 </body>
 
 </html>
