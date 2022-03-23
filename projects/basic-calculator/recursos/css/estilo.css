@@ -1,0 +1,152 @@
+* {
+    font-family: monospace;
+}
+
+body {
+    background-image: url("../imagenes/unnamed.jpg");
+    background-repeat: repeat;
+}
+
+.calculadora {
+    align-content: center;
+    width: 530px;
+    height: 530px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #505a65;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    box-shadow: -7px -8px 5px 0px rgba(0,0,0,0.3);
+}
+
+h1 {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    width: 500px;
+    text-align: center;
+    color: white;
+}
+
+.operacion {
+    display: block;
+    margin: auto;
+    height: 80px;
+    width: 492px;
+    font-size: 40px;
+    text-align: center;
+    background-color: #65836e;
+    border: 1px solid black;
+    
+}
+
+hr {
+    border: 1px solid #546562;
+    width: 500px;
+}
+
+.botonera {
+    position: relative;
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 500px;
+    font-size: 20px;
+}
+
+.normalBtn {
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    width: 116px;
+    height: 60px;
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btnIgual {
+    position: absolute;
+    left: 381px;
+    margin-top: 10px;
+    width: 116px;
+    height: 200px;
+    font-size: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.btn0 {
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    width: 243px;
+    height: 60px;
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.operador {
+    background-color: #323332;
+    color: white;
+    cursor: pointer;
+}
+
+.operador:hover {
+    background-color: #424141;
+    color: white;
+}
+
+.operador:active {
+    box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.29);
+}
+
+.numero {
+    background-color: #5d5d5d;
+    color: white;
+    cursor: pointer;
+}
+
+.numero:hover {
+    background-color: #787878;
+    color: white;
+}
+
+.numero:active {
+    box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.29);
+}
+
+.clear {
+    background-color: #7e0c0c;
+    color: white;
+    cursor: pointer;
+}
+
+.clear:hover{
+    background-color: #920909;
+    color: white;
+}
+
+.clear:active {
+    box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.29);
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: black;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: black;
+   opacity: 1 /* esto es porque Firefox le reduce la opacidad por defecto */;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: black;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: black;
+}
