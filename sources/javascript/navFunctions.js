@@ -15,6 +15,8 @@ function setActiveNavButton() {
     scrollHeight = scroller.scrollHeight;
 
     sectionHeight = scrollHeight / 4;
+    
+    videoInViewport();
 
     if (scrollTop == 0) {
         onClickNavButton('AboutMeNavBtn');
@@ -32,8 +34,6 @@ function setActiveNavButton() {
         onClickNavButton('ContactMeNavBtn');
         window.location.hash = "ContactMe";
     }
-    
-    videoInViewport();
 }
 
 function onClickNavButton(id) {
