@@ -26,6 +26,7 @@
 
 .glider::-webkit-scrollbar {
     display: none;
+    height: 0;
 }
 
 .glider-track {

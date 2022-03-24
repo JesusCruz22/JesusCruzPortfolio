@@ -9,9 +9,9 @@ function isInViewport(element) {
     );
 }
 
-const projectVideos = document.querySelectorAll('.project-video');
-
 function videoInViewport() {
+    const projectVideos = document.querySelectorAll('.project-video');
+    
     projectVideos.forEach(element => {
         isInViewport(element) ? element.play() : element.pause();
     });
