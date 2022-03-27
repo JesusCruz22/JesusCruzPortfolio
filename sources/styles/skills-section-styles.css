@@ -126,7 +126,6 @@
 }
 
 .xp-title {
-    font-size: 1.5em;
     font-weight: bolder;
     padding: 0;
     margin: 0;
@@ -326,6 +325,102 @@
     .skills-background-icon {
         width: 20%;
     }
+}
+
+@media all and (max-height: 625px) and (min-width: 425px) {
+    .skills-section {
+        padding: 0;
+        padding-left: 14%;
+    }
+
+    .right-arrow-button, .left-arrow-button {
+        margin: .5em;
+        width: 30px;
+        height: 30px;
+    }
+
+    .skill-card {
+        margin: 1em;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .card-image {
+        width: 30%;
+        height: auto;
+        margin: .5em auto;
+    }
+
+    .xp-card-section {
+        padding: 0;
+    }
+
+    .xp-title {
+        margin: 0;
+    }
+
+    .xp-image {
+        width: 100px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .xp-projects {
+        padding: .5rem;
+        margin: auto;
+    }
+
+}
+
+@media all and (max-height: 375px) and (min-width: 425px) {
+    .skills-section {
+        padding: 0;
+        padding-left: 14%;
+    }
+
+    .right-arrow-button, .left-arrow-button {
+        margin: .5em;
+        width: 30px;
+        height: 30px;
+    }
+
+    .skill-card {
+        display: grid;
+        gap: 0;
+        margin: 1em;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    .card-image {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        width: 70%;
+        height: auto;
+        margin: .5em auto;
+    }
+
+    .xp-card-section {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        padding: 0;
+    }
+
+    .xp-title {
+        margin: 0;
+    }
+
+    .xp-image {
+        width: 100px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .xp-projects {
+        padding: .5rem;
+        margin: auto;
+    }
+
 }
 
 /* END MEDIA QUIERIES */

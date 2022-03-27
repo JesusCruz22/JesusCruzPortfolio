@@ -15,8 +15,6 @@ function setActiveNavButton() {
     scrollHeight = scroller.scrollHeight;
 
     sectionHeight = scrollHeight / 4;
-    
-    videoInViewport();
 
     if (scrollTop == 0) {
         onClickNavButton('AboutMeNavBtn');
@@ -29,6 +27,7 @@ function setActiveNavButton() {
     else if (scrollTop == sectionHeight * 2) {
         onClickNavButton('ProjectsNavBtn');
         window.location.hash = "Projects";
+        videoInViewport();
     }
     else if (scrollTop == sectionHeight * 3) {
         onClickNavButton('ContactMeNavBtn');

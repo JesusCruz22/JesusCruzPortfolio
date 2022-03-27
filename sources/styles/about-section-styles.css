@@ -50,3 +50,11 @@
         width: 50%;
     }
 }
+
+@media all and (max-height: 625px) and (min-width: 425px) {
+    .about-section {
+        width: 40%;
+        margin: 2em 3em 2em 0;
+        padding: .5rem;
+    }
+}

@@ -16,11 +16,20 @@ header {
     overflow: hidden;
 }
 
+.header-titles {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
 .portfolio-icon {
     transition: all 0.2s ease;
     position: relative;
-    width: 15%;
     align-self: center;
+    width: 15%;
     opacity: 0;
     animation: slidein 1s ease forwards;
     animation-delay: .5s;
@@ -63,6 +72,11 @@ header > h3 {
     animation: typing 1s steps(22), blink 1s steps(23) forwards;
     animation-delay: 2s;
     overflow: hidden;
+}
+
+.flag {
+    width: 25px;
+    height: auto;
 }
 
 @keyframes typing {
@@ -242,7 +256,7 @@ header > h3 {
 
 @media all and (min-width: 675px) {
     .portfolio-icon {
-        width: 5%;
+        width: 15%;
     }
 
     .header-background {
@@ -262,7 +276,7 @@ header > h3 {
 /* (phones, 1200px and up) */
 @media all and (min-width: 1024px) {
     .portfolio-icon {
-        width: 6%;
+        width: 25%;
     }
 
     .header-background {
@@ -277,6 +291,19 @@ header > h3 {
         width: 24%;
     }
     
+}
+
+@media all and (max-height: 625px) and (min-width: 425px) {
+    header {
+        flex-flow: row;
+        justify-content: space-evenly;
+        align-content: space-around;
+    }
+
+    .header-titles {
+        width: 60%;
+        margin-left: 6em;
+    }
 }
 
 /* END MEDIA QUERIES */
