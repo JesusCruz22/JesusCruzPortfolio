@@ -22,7 +22,7 @@ header {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 0;
 }
 
 .portfolio-icon {
@@ -39,7 +39,7 @@ header {
     transform: scale(1.2, 1.2) rotateX(-22deg) rotateY(-10deg);
 }
 
-header > h1 {
+header>h1 {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
@@ -50,7 +50,7 @@ header > h1 {
     overflow: hidden;
 }
 
-header > h2 {
+header>h2 {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
@@ -62,7 +62,7 @@ header > h2 {
     overflow: hidden;
 }
 
-header > h3 {
+header>h3 {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
@@ -129,7 +129,6 @@ header > h3 {
     width: 50%;
     user-select: none;
     cursor: default;
-    transform: rotateZ(10deg);
 }
 
 .background-icon:hover {
@@ -141,101 +140,121 @@ header > h3 {
 .background-icon.icon-1 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    transform: rotateZ(10deg);
 }
 
 .background-icon.icon-2 {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
+    transform: rotateZ(-10deg);
 }
 
 .background-icon.icon-3 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    transform: rotateZ(10deg);
 }
 
 .background-icon.icon-4 {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
+    transform: rotateZ(-10deg);
 }
 
 .background-icon.icon-5 {
     grid-column: 5 / 6;
     grid-row: 2 / 3;
+    transform: rotateZ(10deg);
 }
 
 .background-icon.icon-6 {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    transform: rotateZ(-10deg);
 }
 
 .background-icon.icon-7 {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
+    transform: rotateZ(10deg);
 }
 
 .background-icon.icon-8 {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
+    transform: rotateZ(-10deg);
 }
 
 .background-icon.icon-9 {
     grid-column: 3 / 4;
     grid-row: 4 / 5;
+    transform: rotateZ(10deg);
 }
 
 .background-icon.icon-10 {
     grid-column: 5 / 6;
     grid-row: 4 / 5;
+    transform: rotateZ(-10deg);
 }
 
 .background-icon.icon-11 {
     grid-column: 2 / 3;
     grid-row: 5 / 6;
+    transform: rotateZ(10deg);
 }
 
 .background-icon.icon-12 {
     grid-column: 4 / 5;
     grid-row: 5 / 6;
+    transform: rotateZ(-10deg);
 }
 
 .background-icon.icon-13 {
     grid-column: 1 / 2;
     grid-row: 6 / 7;
+    transform: rotateZ(10deg);
 }
 
 .background-icon.icon-14 {
     grid-column: 3 / 4;
     grid-row: 6 / 7;
+    transform: rotateZ(-10deg);
 }
 
 .background-icon.icon-15 {
     grid-column: 5 / 6;
     grid-row: 6 / 7;
+    transform: rotateZ(10deg);
 }
 
 .background-icon.icon-16 {
     grid-column: 2 / 3;
     grid-row: 7 / 8;
+    transform: rotateZ(-10deg);
 }
 
 .background-icon.icon-17 {
     grid-column: 4 / 5;
     grid-row: 7 / 8;
+    transform: rotateZ(10deg);
 }
 
 .background-icon.icon-18 {
     grid-column: 1 / 2;
     grid-row: 8 / 9;
+    transform: rotateZ(-10deg);
 }
 
 .background-icon.icon-19 {
     grid-column: 3 / 4;
     grid-row: 8 / 9;
+    transform: rotateZ(10deg);
 }
 
 .background-icon.icon-20 {
     grid-column: 5 / 6;
     grid-row: 8 / 9;
+    transform: rotateZ(-10deg);
 }
 
 
@@ -247,11 +266,11 @@ header > h3 {
     .background-icon {
         width: 45%;
     }
-    
+
     .background-icon:hover {
         width: 44%;
     }
-    
+
 }
 
 @media all and (min-width: 675px) {
@@ -266,11 +285,11 @@ header > h3 {
     .background-icon {
         width: 30%;
     }
-    
+
     .background-icon:hover {
         width: 29%;
     }
-    
+
 }
 
 /* (phones, 1200px and up) */
@@ -286,11 +305,11 @@ header > h3 {
     .background-icon {
         width: 25%;
     }
-    
+
     .background-icon:hover {
         width: 24%;
     }
-    
+
 }
 
 @media all and (max-height: 625px) and (min-width: 425px) {

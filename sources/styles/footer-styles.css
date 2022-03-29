@@ -10,6 +10,114 @@
     width: 100vw;
     height: 100vh;
     padding: 0;
+    overflow: hidden;
+}
+
+.buttons-section, .footer h2 {
+    z-index: 1;
+}
+
+.footer-background {
+    position: absolute;
+    top: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    gap: 1em;
+    align-items: center;
+    opacity: 0;
+    animation: footer-background-animation 40s ease infinite alternate, slidein 5s ease 5s forwards;
+}
+
+@keyframes footer-background-animation {
+    0% {
+        transform: translate(10%, 2%)
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+.footer-background-icon {
+    transition: all 0.2s ease;
+    margin: 0 auto;
+    width: 60%;
+    user-select: none;
+    cursor: pointer;
+}
+
+.footer-background-icon:hover {
+    padding: 1em;
+    transform: scale(.9) rotateZ(5deg);
+}
+
+.footer-background-icon.icon-1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    transform: rotateZ(22deg);
+}
+
+.footer-background-icon.icon-2 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    transform: rotateZ(-22deg);
+}
+
+.footer-background-icon.icon-3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    transform: rotateZ(22deg);
+}
+
+.footer-background-icon.icon-4 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    transform: rotateZ(-22deg);
+}
+
+.footer-background-icon.icon-5 {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+    transform: rotateZ(22deg);
+}
+
+.footer-background-icon.icon-6 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    transform: rotateZ(-22deg);
+}
+
+.footer-background-icon.icon-7 {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+    transform: rotateZ(22deg);
+}
+
+.footer-background-icon.icon-8 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    transform: rotateZ(-22deg);
+}
+
+@media all and (min-width: 1075px) {
+    .footer-background {
+        position: absolute;
+        top: 0;
+        margin: auto;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        gap: 2em;
+        align-items: center;
+        opacity: 0;
+        animation: footer-background-animation 40s ease infinite alternate, slidein 5s ease 5s forwards;
+    }
+
+    .footer-background-icon {
+        width: 30%;
+    }
 }
 
 @media all and (max-height: 625px) and (min-width: 425px) {

@@ -127,6 +127,7 @@
 
 .glider-dot:focus, .glider-dot:hover {
     background-color: rgb(36, 36, 36, .8);
+    transform: scale(1.1, 1.1);
 }
 
 .glider-dot.active {
