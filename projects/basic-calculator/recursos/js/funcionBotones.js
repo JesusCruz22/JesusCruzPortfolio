@@ -1,6 +1,9 @@
+
+//#region = Seccion de funciones descartadas en la version final
+
 contadorPuntos = 0;
 
-// Función para agregar el caracter presionado en la botonera en el campo de texto.
+// Funci0n para agregar el caracter presionado en la botonera en el campo de texto.
 function mostrarCaracter() {
     // Asignar el texto introducido por el usuario a la variable operacion
     operacion = document.getElementById("operacion");
@@ -32,11 +35,11 @@ function mostrarCaracter() {
 
     if (operacion.value === "NaN") limpiarOperacion();
 
-console.log(elementosOperacion);
-console.log(window.event.target.value);
+    console.log(elementosOperacion);
+    console.log(window.event.target.value);
 
     // Si hay menos de 3 elementos en la operación ingresada, entonces se permitira ingresar mas elementos.
-    if (elementosOperacion.length <= 3) {       
+    if (elementosOperacion.length <= 3) {
         // Si el ultimo caracter de la operación es un simbolo o punto y se pretende agregar otro simbolo o punto a continuación, entonces no se agregara nada al campo de texto
         if (((operacion.value.toString().endsWith(" ") || operacion.value.toString() === "-" || operacion.value.toString().endsWith(".")) && isSimbolo === true));
         // Si no se ha ingresado nada en el campo de texto, entonces se evaluará... 
@@ -44,7 +47,7 @@ console.log(window.event.target.value);
             // ... Si fue presionado el simbolo "-", entonces se agregara "-" al incioo de la operación
             if (window.event.target.value.toString()[1] === "-") {
                 operacion.value += window.event.target.value.toString()[1];
-            } 
+            }
             // ... Si ningún simbolo fue presionado, entonces se agregara el numero que fue presionado
             else if (isSimbolo === false) {
                 operacion.value += window.event.target.value;
@@ -53,7 +56,7 @@ console.log(window.event.target.value);
         // Si el campo de texto no esta vacio y tampoco tiene como ultimo caracter un simbolo aritmetico, entonces se evaluará...
         else {
             // Si hay 3 elementos en la operación y se quiere agregar otro simbolo, entonces no se agregara el simbolo
-            if(elementosOperacion.length === 3 && isSimbolo === true) {
+            if (elementosOperacion.length === 3 && isSimbolo === true) {
                 // Si se presiona el btnPunto y se ha al menos un punto en la operacion, entonces se podra agregar un nuevo punto
                 if (window.event.target.value === "." && contadorPuntos <= 1) {
                     if (contadorPuntos === 0) contadorPuntos = 2;
@@ -64,12 +67,12 @@ console.log(window.event.target.value);
             // pero si no hay 3 elementos se podran agregar un simbolo o un numero
             else {
                 // Si se presiona el btnPunto, entonces...
-                if (window.event.target.value === ".") { 
+                if (window.event.target.value === ".") {
                     // Se evaluara que no se haya agregado puntos a la operacion
                     // Si no se agregaron puntos, entonces se podra agregar uno nuevo
                     if (contadorPuntos === 0) {
                         contadorPuntos++;
-                        operacion.value += window.event.target.value;   
+                        operacion.value += window.event.target.value;
                     }
                 }
                 else operacion.value += window.event.target.value;
@@ -78,13 +81,42 @@ console.log(window.event.target.value);
     }
 }
 
-// Función para borrar todos los caracteres agregados a la caja de texto.
-function limpiarOperacion() {
+// Funci0n para ejecutar el calculo de la operación ingresada.
+function calcular() {
+    // Almacenar operacion ingresada en la variable operación
     operacion = document.getElementById("operacion");
-    operacion.value = "";
+    // Dividir los elementos de la operacion ingresada y almacenarlos en el arreglo elementosOperacion
+    elementosOperacion = operacion.value.split(" ");
+    // Definir variables donde se almacenaran los elementos numericos de la operacion
+    elemento1 = 0;
+    elemento2 = 0;
+    resultado = 0;
+
+    // Evaluar si el arreglo elementosOperacion contiene 3 elementos
+    if (elementosOperacion.length === 3) {
+        // Asignar valores numericos a los elementos definidos
+        elemento1 = parseFloat(elementosOperacion[0]);
+        elemento2 = parseFloat(elementosOperacion[2]);
+
+        // Evaluar que operacion ejecutar segun el simbolo aritmetico ingresado en la operacion
+        if (elementosOperacion[1] === "*")
+            resultado = elemento1 * elemento2;
+        else if (elementosOperacion[1] === "+")
+            resultado = elemento1 + elemento2;
+        else if (elementosOperacion[1] === "-")
+            resultado = elemento1 - elemento2;
+        else if (elementosOperacion[1] === "/")
+            resultado = elemento1 / elemento2;
+    }
+    // Si solo hay un elemento numerico, este sera el resultado
+    else if (elementosOperacion.length < 3) resultado = parseFloat(elementosOperacion[0]);
+
+    // Mostrar resultado de la operacion
+    console.log(resultado);
+    operacion.value = resultado;
 }
 
-// Función para controlar las teclas que se pueden y no se pueden agrgar en la caja de texto.
+// Funci0n para controlar las teclas que se pueden y no se pueden agrgar en la caja de texto.
 function controlTeclas(e) {
     // Asignar el elemento donde se agregara la operacion a la variable operación
     operacion = document.getElementById("operacion");
@@ -116,116 +148,98 @@ function controlTeclas(e) {
 
 }
 
+//#endregion
+
+
+//#region = Seccion de funciones usadas */
+
+// CAJA DE TEXTO
+operacion = document.getElementById("operacion");
+
+// MAPEADO DE BOTONERA
+btnMultiplicacion = document.getElementById("multiplicacion");
+btnSuma = document.getElementById("suma");
+btnResta = document.getElementById("resta");
+btnDivision = document.getElementById("division");
+btn0 = document.getElementById("cero");
+btn1 = document.getElementById("uno");
+btn2 = document.getElementById("dos");
+btn3 = document.getElementById("tres");
+btn4 = document.getElementById("cuatro");
+btn5 = document.getElementById("cinco");
+btn6 = document.getElementById("seis");
+btn7 = document.getElementById("siete");
+btn8 = document.getElementById("ocho");
+btn9 = document.getElementById("nueve");
+btnPunto = document.getElementById("punto");
+btnIgual = document.getElementById("igual");
+btnClear = document.getElementById("clear");
+
+function onClickButton(btnValue) {
+    document.calculadora.operacion.value += btnValue;
+}
+
+function getResult() {
+    try {
+        document.calculadora.operacion.value = eval(document.calculadora.operacion.value);
+    } catch {
+        btnClear.click();
+    }
+}
 
 // Función para detectar las teclas que se presionan y sincronizar el teclado fisico con la botonera.
-document.addEventListener("keypress", function(e) {
-    // CAJA DE TEXTO
-    operacion = document.getElementById("operacion");
-
-    // MAPEADO DE BOTONERA
-    btnMultiplicacion = document.getElementById("multiplicacion");
-    btnSuma = document.getElementById("suma");
-    btnResta = document.getElementById("resta");
-    btnDivision = document.getElementById("division");
-    btn0 = document.getElementById("cero");
-    btn1 = document.getElementById("uno");
-    btn2 = document.getElementById("dos");
-    btn3 = document.getElementById("tres");
-    btn4 = document.getElementById("cuatro");
-    btn5 = document.getElementById("cinco");
-    btn6 = document.getElementById("seis");
-    btn7 = document.getElementById("siete");
-    btn8 = document.getElementById("ocho");
-    btn9 = document.getElementById("nueve");
-    btnPunto = document.getElementById("punto");
-    btnIgual = document.getElementById("igual");
-    btnClear = document.getElementById("clear");
-
-
+document.addEventListener("keypress", function (e) {
     // MAPEADO DE TECLADO FISICO
     if (e.key === "*")
-    btnMultiplicacion.click();
+        btnMultiplicacion.click();
 
     else if (e.key === "+")
-    btnSuma.click();
+        btnSuma.click();
 
     else if (e.key === "-")
-    btnResta.click();
+        btnResta.click();
 
     else if (e.key === "/")
-    btnDivision.click();
+        btnDivision.click();
 
     else if (e.key === "0")
-    btn0.click();
+        btn0.click();
 
     else if (e.key === "1")
-    btn1.click();
-    
+        btn1.click();
+
     else if (e.key === "2")
-    btn2.click();
-    
+        btn2.click();
+
     else if (e.key === "3")
-    btn3.click();
-    
+        btn3.click();
+
     else if (e.key === "4")
-    btn4.click();
-    
+        btn4.click();
+
     else if (e.key === "5")
-    btn5.click();
-    
+        btn5.click();
+
     else if (e.key === "6")
-    btn6.click();
-    
+        btn6.click();
+
     else if (e.key === "7")
-    btn7.click();
-    
+        btn7.click();
+
     else if (e.key === "8")
-    btn8.click();
-    
+        btn8.click();
+
     else if (e.key === "9")
-    btn9.click();
-    
+        btn9.click();
+
     else if (e.key === ".")
-    btnPunto.click();
+        btnPunto.click();
 
     else if (e.key === "Enter")
-    btnIgual.click();
+        btnIgual.click();
 
     else
-    btnClear.click();
+        btnClear.click();
 });
 
-// Función para ejecutar el calculo de la operación ingresada.
-function calcular() {
-    // Almacenar operacion ingresada en la variable operación
-    operacion = document.getElementById("operacion");
-    // Dividir los elementos de la operacion ingresada y almacenarlos en el arreglo elementosOperacion
-    elementosOperacion = operacion.value.split(" ");
-    // Definir variables donde se almacenaran los elementos numericos de la operacion
-    elemento1 = 0;
-    elemento2 = 0;
-    resultado = 0;
-    
-    // Evaluar si el arreglo elementosOperacion contiene 3 elementos
-    if (elementosOperacion.length === 3) {
-        // Asignar valores numericos a los elementos definidos
-        elemento1 = parseFloat(elementosOperacion[0]);
-        elemento2 = parseFloat(elementosOperacion[2]);
-        
-        // Evaluar que operacion ejecutar segun el simbolo aritmetico ingresado en la operacion
-        if (elementosOperacion[1] === "*")
-            resultado = elemento1 * elemento2;   
-        else if (elementosOperacion[1] === "+")
-            resultado = elemento1 + elemento2;
-        else if (elementosOperacion[1] === "-")
-            resultado = elemento1 - elemento2;
-        else if (elementosOperacion[1] === "/")
-            resultado = elemento1 / elemento2;
-    }
-    // Si solo hay un elemento numerico, este sera el resultado
-    else if (elementosOperacion.length < 3) resultado = parseFloat(elementosOperacion[0]);
-    
-    // Mostrar resultado de la operacion
-    console.log(resultado);
-    operacion.value = resultado;
-}
+//#endregion

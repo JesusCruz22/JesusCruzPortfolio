@@ -104,7 +104,7 @@ header>h3 {
     gap: 1rem;
     align-items: center;
     opacity: 0;
-    animation: background-animation 30s ease infinite alternate, slidein 5s ease 5s forwards;
+    animation: background-animation 30s ease infinite alternate, slidein 5s ease 2s forwards;
 }
 
 @keyframes slidein {

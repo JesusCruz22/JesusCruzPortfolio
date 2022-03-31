@@ -19,9 +19,50 @@
     overflow: hidden;
 }
 
+.projects-section.basicCalculator {
+    background: radial-gradient(circle, #ff8727, #ff5c39, #f53d3b, #f74539, #9e0030);
+    background-size: 500% 500%;
+}
+
+.projects-section.pongClone {
+    background: radial-gradient(circle, #249CFF, #2196F3, #1E85D9, #196DB3);
+    background-size: 500% 500%;
+}
+
+.projects-section.frutiMath {
+    background: radial-gradient(circle, #FFDF00, #E6C700, #BFA600, #806E00);
+    background-size: 500% 500%;
+}
+
+.projects-section.miniStoreOnline {
+    background: radial-gradient(circle, #61DAFB, #58C3E0, #49A2BA, #306A7A);
+    background-size: 500% 500%;
+}
+
+.projects-section.snakeClone {
+    background: radial-gradient(circle, #A16EE0, #9867D4, #865BBA, #6A4894);
+    background-size: 500% 500%;
+}
+
+.projects-section.storeAdmin {
+    background: radial-gradient(circle, #D9D9D9, #999999, #595959, #4C4C4C);
+    background-size: 500% 500%;
+}
+
+.projects-section.chromeDinoGameClone {
+    background: radial-gradient(circle, #7BC0ED, #5A8CAD, #5382A1, #466D87);
+    background-size: 500% 500%;
+}
+
+.projects-section.infinityBox {
+    background: radial-gradient(circle, #7BC0ED, #5A8CAD, #5382A1, #466D87);
+    background-size: 500% 500%;
+}
+
 .projects-section>h2 {
     margin-bottom: 1em;
     color: white;
+    z-index: 1;
 }
 
 .project-article {
@@ -162,7 +203,7 @@
 .projects-background-icon {
     transition: all 0.2s ease;
     margin: 0 auto;
-    width: 80%;
+    width: 60%;
     user-select: none;
     cursor: pointer;
     transform: rotateZ(-2.5deg);

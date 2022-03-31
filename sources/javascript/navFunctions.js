@@ -17,6 +17,7 @@ function setActiveNavButton() {
     sectionHeight = scrollHeight / 4;
 
     videoInViewport();
+    setProjectsBackground();
 
     if (scrollTop == 0) {
         onClickNavButton('AboutMeNavBtn');

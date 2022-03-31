@@ -2,7 +2,7 @@ nav {
     transition: all 0.2s ease;
     opacity: 0;
     animation: slidein 1s ease forwards;
-    animation-delay: 4s;
+    animation-delay: 1s;
     cursor: pointer;
     z-index: 1;
 }

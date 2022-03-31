@@ -1,6 +1,6 @@
 // Variables
 // Array to save all the icons to change
-let iconsPaths = [
+let skillsIconsPaths = [
 	"sources/images/html-icon-gris.svg",
 	"sources/images/css3-icon-gris.svg",
 	"sources/images/js-icon-gris.svg",
@@ -13,7 +13,7 @@ let iconsPaths = [
 // Get skills-section elemento to change its background later
 const skillsSection = document.getElementById('Skills');
 // Get icons from background of the skills-section
-const backgroundIcons = document.getElementsByClassName('skills-background-icon');
+const skillsBackgroundIcons = document.getElementsByClassName('skills-background-icon');
 
 // Set carousel configuration
 window.addEventListener('load', function () {
@@ -57,55 +57,55 @@ window.addEventListener('load', function () {
 });
 
 // Evaluate card id and define the background icons and background style
-function setBackgroundStyle(card) {
+function setSkillsBackground(card) {
 	// Evaluate card id
 	switch (card) {
 		case "htmlCard":
 			skillsSection.classList.add('html');
 
-			Array.prototype.forEach.call(backgroundIcons, function (icon) {
+			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/html-icon-gris.svg";
 			});
 			break;
 		case "cssCard":
 			skillsSection.classList.add('css');
 
-			Array.prototype.forEach.call(backgroundIcons, function (icon) {
+			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/css3-icon-gris.svg";
 			});
 			break;
 		case "jsCard":
 			skillsSection.classList.add('js');
 
-			Array.prototype.forEach.call(backgroundIcons, function (icon) {
+			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/js-icon-gris.svg";
 			});
 			break;
 		case "reactCard":
 			skillsSection.classList.add('react');
 
-			Array.prototype.forEach.call(backgroundIcons, function (icon) {
+			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/react-icon-gris.svg";
 			});
 			break;
 		case "csharpCard":
 			skillsSection.classList.add('csharp');
 
-			Array.prototype.forEach.call(backgroundIcons, function (icon) {
+			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/csharp-icon-gris.svg";
 			});
 			break;
 		case "unityCard":
 			skillsSection.classList.add('unity');
 
-			Array.prototype.forEach.call(backgroundIcons, function (icon) {
+			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/unity-icon-gris.svg";
 			});
 			break;
 		case "javaCard":
 			skillsSection.classList.add('java');
 
-			Array.prototype.forEach.call(backgroundIcons, function (icon) {
+			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/java-icon-gris.svg";
 			});
 			break;
@@ -114,7 +114,7 @@ function setBackgroundStyle(card) {
 }
 
 // Set the initial and default style of the skills-section background
-function setDefaultBackground() {
+function setSkillsDefaultBackground() {
 	// remove all card styles applied
 	skillsSection.classList.remove('html');
 	skillsSection.classList.remove('css');
@@ -125,11 +125,11 @@ function setDefaultBackground() {
 	skillsSection.classList.remove('java');
 
 	// Shuffle iconsPath array
-	shuffleArray(iconsPaths);
+	shuffleArray(skillsIconsPaths);
 
 	// Replace old icons with new random icons from iconsPaths array
-	for (var i = 0; i < iconsPaths.length; i++) {
-		backgroundIcons[i].src = iconsPaths[i];
+	for (var i = 0; i < skillsIconsPaths.length; i++) {
+		skillsBackgroundIcons[i].src = skillsIconsPaths[i];
 	}
 }
 

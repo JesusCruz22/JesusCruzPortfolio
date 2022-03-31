@@ -21,13 +21,13 @@
     position: absolute;
     top: 0;
     margin: auto;
-    width: 100vw;
-    height: 100vh;
+    width: 122vw;
+    height: 122vh;
     display: grid;
-    gap: 1em;
+    gap: 0;
     align-items: center;
     opacity: 0;
-    animation: footer-background-animation 40s ease infinite alternate, slidein 5s ease 5s forwards;
+    animation: footer-background-animation 30s ease infinite alternate, slidein 5s ease 2s forwards;
 }
 
 @keyframes footer-background-animation {
@@ -43,7 +43,7 @@
 .footer-background-icon {
     transition: all 0.2s ease;
     margin: 0 auto;
-    width: 60%;
+    width: 70%;
     user-select: none;
     cursor: pointer;
 }
@@ -57,48 +57,49 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     transform: rotateZ(22deg);
+    margin-left: 1em;
 }
 
 .footer-background-icon.icon-2 {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
     transform: rotateZ(-22deg);
+    margin-left: 1em;
 }
 
 .footer-background-icon.icon-3 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     transform: rotateZ(22deg);
+    margin-right: 1em;
 }
 
 .footer-background-icon.icon-4 {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
     transform: rotateZ(-22deg);
+    margin-right: 1em;
 }
 
 .footer-background-icon.icon-5 {
     grid-column: 5 / 6;
     grid-row: 2 / 3;
     transform: rotateZ(22deg);
+    margin-left: 1em;
 }
 
 .footer-background-icon.icon-6 {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     transform: rotateZ(-22deg);
+    margin-left: 1em;
 }
 
 .footer-background-icon.icon-7 {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
     transform: rotateZ(22deg);
-}
-
-.footer-background-icon.icon-8 {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    transform: rotateZ(-22deg);
+    margin-right: 1em;
 }
 
 @media all and (min-width: 1075px) {
@@ -107,21 +108,25 @@
         top: 0;
         margin: auto;
         width: 100vw;
-        height: 100vh;
+        height: 122vh;
         display: grid;
         gap: 2em;
         align-items: center;
         opacity: 0;
-        animation: footer-background-animation 40s ease infinite alternate, slidein 5s ease 5s forwards;
+        animation: footer-background-animation 40s ease infinite alternate, slidein 5s ease 2s forwards;
     }
 
     .footer-background-icon {
-        width: 30%;
+        width: 40%;
     }
 }
 
 @media all and (max-height: 625px) and (min-width: 425px) {
     .footer {
         padding-left: 14%;
+    }
+
+    .footer-background-icon {
+        width: 35%;
     }
 }
