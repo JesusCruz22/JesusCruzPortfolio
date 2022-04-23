@@ -4,7 +4,7 @@ const projectsSection = document.getElementById('Projects');
 const projectsBackgroundIcons = document.getElementsByClassName('projects-background-icon');
 
 // Array to save all the icons to change
-let projectsIconsPaths = [
+let basicCalculatorIconsPaths = [
     "sources/images/plus-icon.svg",
     "sources/images/minus-icon.svg",
     "sources/images/division-icon.svg",
@@ -46,14 +46,22 @@ function setProjectsBackground() {
         case 'BasicCalculator':
             projectsSection.classList.add('basicCalculator');
 
-            // Replace old icons with new random icons from iconsPaths array
-            for (var i = 0; i < projectsIconsPaths.length; i++) {
-                projectsBackgroundIcons[i].src = projectsIconsPaths[i];
+            for (var i = 0; i < basicCalculatorIconsPaths.length; i++) {
+                projectsBackgroundIcons[i].src = basicCalculatorIconsPaths[i];
+            }
+
+            for (var i = basicCalculatorIconsPaths.length; i < projectsBackgroundIcons.length; i++) {
+                projectsBackgroundIcons[i].src = "";
             }
 
             break;
         case 'PongClone':
             projectsSection.classList.add('pongClone');
+
+            for (var i = 0; i < projectsBackgroundIcons.length; i++) {
+                projectsBackgroundIcons[i].src = "sources/images/pong-clone-icon.svg";
+            }
+
             break;
         case 'FrutiMath':
             projectsSection.classList.add('frutiMath');
