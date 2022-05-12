@@ -1,5 +1,5 @@
-import Ball from '/projects/pong-clone/javascript/Ball.js';
-import Paddle from '/projects/pong-clone/javascript/Paddle.js';
+import Ball from './Ball.js';
+import Paddle from './Paddle.js';
 
 const ball = new Ball(document.getElementById('ball'));
 const playerPaddle = new Paddle(document.getElementById('player-paddle'));
