@@ -13,7 +13,39 @@ header {
     padding: 5rem 0rem;
     text-align: center;
     color: white;
+    background: radial-gradient(circle,
+            #465ADE,
+            #3544A6,
+            #1a2253,
+            #121637,
+            #465ADE,
+            #3544A6);
+    background-size: 400% 400%;
+    animation: gradient-background 50s ease infinite alternate;
     overflow: hidden;
+}
+
+
+@keyframes gradient-background {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 0% 50%;
+    }
+
+    75% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .header-titles {

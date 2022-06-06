@@ -5,27 +5,14 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Source Code Pro', monospace;
-    width: 100vw;
-    height: 110vh;
-    background: radial-gradient(circle,
-            #465ADE,
-            #3544A6,
-            #1a2253,
-            #121637,
-            #465ADE,
-            #3544A6);
-    background-size: 400% 400%;
-    animation: gradient-background 50s ease infinite alternate;
-    overflow: hidden;
 }
 
 .scroller {
     width: 100vw;
     height: 100vh;
     position: fixed;
+    display: flow-root;
     top: 0;
     left: 0;
     right: 0;
@@ -41,27 +28,6 @@ body {
     scroll-snap-align: start;
 }
 
-@keyframes gradient-background {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    25% {
-        background-position: 100% 50%;
-    }
-
-    50% {
-        background-position: 0% 50%;
-    }
-
-    75% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
 
 h1 {
     transition: all 0.2s ease;
