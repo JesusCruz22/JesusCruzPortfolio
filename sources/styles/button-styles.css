@@ -8,7 +8,7 @@
     text-decoration: none;
     opacity: 0;
     animation: slidein 1s ease forwards;
-    animation-delay: 1.5s;
+    animation-delay: 4s;
     flex-wrap: nowrap;
 }
 
@@ -54,7 +54,7 @@
 /* (phones, 675px and up) */
 @media (min-width: 675px) {
     .resume-button, .linkedin-icon, .github-icon, .run-project-icon {
-        margin: 2em .5em;
+        margin: 1em .5em;
     }
 
     .resume-button img, .linkedin-icon img, .github-icon img, .run-project-icon img {

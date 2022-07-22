@@ -13,13 +13,11 @@ header {
     padding: 5rem 0rem;
     text-align: center;
     color: white;
-    background: radial-gradient(circle,
+    background: linear-gradient(120deg,
             #465ADE,
             #3544A6,
             #1a2253,
-            #121637,
-            #465ADE,
-            #3544A6);
+            #121637);
     background-size: 400% 400%;
     animation: gradient-background 50s ease infinite alternate;
     overflow: hidden;
@@ -63,51 +61,50 @@ header {
     align-self: center;
     width: 15%;
     opacity: 0;
-    animation: slidein 1s ease forwards;
-    animation-delay: .5s;
+    animation: slidein 3s ease forwards;
 }
 
 .portfolio-icon:hover {
     transform: scale(1.2, 1.2) rotateX(-22deg) rotateY(-10deg);
 }
 
-header>h1 {
+.header-titles>h1 {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
     width: 28ch;
     opacity: 0;
     border-radius: 5px;
-    animation: typing 1s steps(17), blink 1s steps(18) forwards;
+    animation: typing 1s steps(17), blink 1s steps(30) forwards;
     overflow: hidden;
 }
 
-header>h2 {
+.header-titles>h2 {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
     width: 28ch;
     opacity: 0;
     border-radius: 5px;
-    animation: typing 1s steps(27), blink 1s steps(28) forwards;
+    animation: typing 1s steps(27), blink 1s steps(30) forwards;
     animation-delay: 1s;
     overflow: hidden;
 }
 
-header>h3 {
+.header-titles>h3 {
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
     width: 22ch;
     opacity: 0;
     border-radius: 5px;
-    animation: typing 1s steps(22), blink 1s steps(23) forwards;
+    animation: typing 1s steps(22), blink 1s steps(30) forwards;
     animation-delay: 2s;
     overflow: hidden;
 }
 
 .flag {
-    width: 25px;
+    width: 10%;
     height: auto;
 }
 
@@ -136,7 +133,8 @@ header>h3 {
     gap: 1rem;
     align-items: center;
     opacity: 0;
-    animation: background-animation 30s ease infinite alternate, slidein 5s ease 2s forwards;
+    animation: background-animation 50s ease infinite alternate, slidein 3s ease 2s forwards;
+    animation-delay: 4s;
 }
 
 @keyframes slidein {
@@ -158,7 +156,7 @@ header>h3 {
 .background-icon {
     transition: all 0.2s ease;
     margin: auto;
-    width: 50%;
+    width: 30%;
     user-select: none;
     cursor: default;
 }
@@ -166,127 +164,180 @@ header>h3 {
 .background-icon:hover {
     width: 49%;
     padding: 1em;
-    transform: rotateZ(15deg);
 }
 
 .background-icon.icon-1 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    transform: rotateZ(10deg);
+    padding-left: 1.5em;
+    animation: odd-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-2 {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
-    transform: rotateZ(-10deg);
+    padding-top: 1.5em;
+    animation: even-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-3 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    transform: rotateZ(10deg);
+    padding-right: 1.5em;
+    animation: odd-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-4 {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    transform: rotateZ(-10deg);
+    padding-bottom: 1.5em;
+    animation: even-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-5 {
     grid-column: 5 / 6;
     grid-row: 2 / 3;
-    transform: rotateZ(10deg);
+    padding-left: 1.5em;
+    animation: odd-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-6 {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
-    transform: rotateZ(-10deg);
+    padding-top: 1.5em;
+    animation: even-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-7 {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
-    transform: rotateZ(10deg);
+    padding-right: 1.5em;
+    animation: odd-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-8 {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
-    transform: rotateZ(-10deg);
+    padding-bottom: 1.5em;
+    animation: even-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-9 {
     grid-column: 3 / 4;
     grid-row: 4 / 5;
-    transform: rotateZ(10deg);
+    padding-left: 1.5em;
+    animation: odd-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-10 {
     grid-column: 5 / 6;
     grid-row: 4 / 5;
-    transform: rotateZ(-10deg);
+    padding-top: 1.5em;
+    animation: even-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-11 {
     grid-column: 2 / 3;
     grid-row: 5 / 6;
-    transform: rotateZ(10deg);
+    padding-right: 1.5em;
+    animation: odd-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-12 {
     grid-column: 4 / 5;
     grid-row: 5 / 6;
-    transform: rotateZ(-10deg);
+    padding-bottom: 1.5em;
+    animation: even-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-13 {
     grid-column: 1 / 2;
     grid-row: 6 / 7;
-    transform: rotateZ(10deg);
+    padding-left: 1.5em;
+    animation: odd-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-14 {
     grid-column: 3 / 4;
     grid-row: 6 / 7;
-    transform: rotateZ(-10deg);
+    padding-top: 1.5em;
+    animation: even-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-15 {
     grid-column: 5 / 6;
     grid-row: 6 / 7;
-    transform: rotateZ(10deg);
+    padding-right: 1.5em;
+    animation: odd-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-16 {
     grid-column: 2 / 3;
     grid-row: 7 / 8;
-    transform: rotateZ(-10deg);
+    padding-bottom: 1.5em;
+    animation: even-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-17 {
     grid-column: 4 / 5;
     grid-row: 7 / 8;
-    transform: rotateZ(10deg);
+    padding-left: 1.5em;
+    animation: odd-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-18 {
     grid-column: 1 / 2;
     grid-row: 8 / 9;
-    transform: rotateZ(-10deg);
+    padding-top: 1.5em;
+    animation: even-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-19 {
     grid-column: 3 / 4;
     grid-row: 8 / 9;
-    transform: rotateZ(10deg);
+    padding-right: 1.5em;
+    animation: odd-background-icon-animation 10s ease infinite alternate;
 }
 
 .background-icon.icon-20 {
     grid-column: 5 / 6;
     grid-row: 8 / 9;
-    transform: rotateZ(-10deg);
+    padding-bottom: 1.5em;
+    animation: even-background-icon-animation 10s ease infinite alternate;
+}
+
+@keyframes odd-background-icon-animation {
+    0% {
+        transform: scale(0.8);
+        transform: rotateZ(5deg);
+    }
+
+    50% {
+        transform: scale(1);
+        transform: rotateZ(-5deg);
+    }
+
+    100%{
+        transform: scale(0.8);
+        transform: rotateZ(5deg);
+    }
+}
+
+@keyframes even-background-icon-animation {
+    0% {
+        transform: scale(1);
+        transform: rotateZ(-5deg);
+    }
+
+    50% {
+        transform: scale(0.8);
+        transform: rotateZ(5deg);
+    }
+
+    100% {
+        transform: scale(1);
+        transform: rotateZ(-5deg);
+    }
 }
 
 
@@ -341,7 +392,6 @@ header>h3 {
     .background-icon:hover {
         width: 24%;
     }
-
 }
 
 @media all and (max-height: 625px) and (min-width: 425px) {
@@ -352,7 +402,7 @@ header>h3 {
     }
 
     .header-titles {
-        width: 60%;
+        width: 50%;
         margin-left: 6em;
     }
 }

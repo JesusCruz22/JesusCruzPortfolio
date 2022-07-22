@@ -61,49 +61,49 @@ function setSkillsBackground(card) {
 	// Evaluate card id
 	switch (card) {
 		case "htmlCard":
-			skillsSection.classList.add('html');
+			//skillsSection.classList.add('html');
 
 			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/html-icon-gris.svg";
 			});
 			break;
 		case "cssCard":
-			skillsSection.classList.add('css');
+			//skillsSection.classList.add('css');
 
 			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/css3-icon-gris.svg";
 			});
 			break;
 		case "jsCard":
-			skillsSection.classList.add('js');
+			//skillsSection.classList.add('js');
 
 			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/js-icon-gris.svg";
 			});
 			break;
 		case "reactCard":
-			skillsSection.classList.add('react');
+			//skillsSection.classList.add('react');
 
 			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/react-icon-gris.svg";
 			});
 			break;
 		case "csharpCard":
-			skillsSection.classList.add('csharp');
+			//skillsSection.classList.add('csharp');
 
 			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/csharp-icon-gris.svg";
 			});
 			break;
 		case "unityCard":
-			skillsSection.classList.add('unity');
+			//skillsSection.classList.add('unity');
 
 			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/unity-icon-gris.svg";
 			});
 			break;
 		case "javaCard":
-			skillsSection.classList.add('java');
+			//skillsSection.classList.add('java');
 
 			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
 				icon.src = "sources/images/java-icon-gris.svg";
@@ -116,6 +116,7 @@ function setSkillsBackground(card) {
 // Set the initial and default style of the skills-section background
 function setSkillsDefaultBackground() {
 	// remove all card styles applied
+	/*
 	skillsSection.classList.remove('html');
 	skillsSection.classList.remove('css');
 	skillsSection.classList.remove('js');
@@ -123,6 +124,7 @@ function setSkillsDefaultBackground() {
 	skillsSection.classList.remove('csharp');
 	skillsSection.classList.remove('unity');
 	skillsSection.classList.remove('java');
+	*/
 
 	// Shuffle iconsPath array
 	shuffleArray(skillsIconsPaths);
