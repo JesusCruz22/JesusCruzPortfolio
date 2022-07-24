@@ -130,7 +130,7 @@ header {
     height: 130vh;
     transform: rotate(45deg);
     display: grid;
-    gap: 1rem;
+    gap: 0;
     align-items: center;
     opacity: 0;
     animation: background-animation 50s ease infinite alternate, slidein 3s ease 2s forwards;
@@ -155,14 +155,14 @@ header {
 
 .background-icon {
     transition: all 0.2s ease;
-    margin: auto;
-    width: 30%;
+    margin: 0;
+    width: 50%;
     user-select: none;
     cursor: default;
 }
 
 .background-icon:hover {
-    width: 49%;
+    width: 45%;
     padding: 1em;
 }
 

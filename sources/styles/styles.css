@@ -6,12 +6,18 @@
 
 body {
     font-family: 'Source Code Pro', monospace;
+    position: relative;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .scroller {
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: relative;
     display: flow-root;
     top: 0;
     left: 0;

@@ -20,7 +20,7 @@
 
 .skills-section>h2 {
     margin: 0;
-    color: rgb(34, 34, 34, 0.8);
+    color: rgb(0, 0, 0, 0.5);
     text-shadow: none;
     z-index: 1;
 }
@@ -159,12 +159,12 @@
     gap: 0;
     align-items: center;
     opacity: 0;
-    animation: skills-background-animation 30s ease infinite alternate, slidein 5s ease 5s forwards;
+    animation: skills-background-animation 60s ease infinite alternate, slidein 5s ease 5s forwards;
 }
 
 .skills-background-icon {
     transition: all 0.2s ease;
-    margin: 0 auto;
+    margin: 0;
     width: 60%;
     user-select: none;
     cursor: pointer;
@@ -172,13 +172,12 @@
 
 .skills-background-icon:hover {
     padding: 1em;
-    transform: scale(.9) rotateZ(15deg);
 }
 
 .skills-background-icon.icon-1 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    animation: odd-background-icon-animation 10s ease infinite alternate;
+    animation: odd-background-icon-animation 10s ease infinite alternate-reverse;
 }
 
 .skills-background-icon.icon-2 {
@@ -190,7 +189,7 @@
 .skills-background-icon.icon-3 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    animation: odd-background-icon-animation 10s ease infinite alternate;
+    animation: odd-background-icon-animation 10s ease infinite alternate-reverse;
 }
 
 .skills-background-icon.icon-4 {
@@ -202,7 +201,7 @@
 .skills-background-icon.icon-5 {
     grid-column: 5 / 6;
     grid-row: 2 / 3;
-    animation: odd-background-icon-animation 10s ease infinite alternate;
+    animation: odd-background-icon-animation 10s ease infinite alternate-reverse;
 }
 
 .skills-background-icon.icon-6 {
@@ -214,7 +213,7 @@
 .skills-background-icon.icon-7 {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
-    animation: odd-background-icon-animation 10s ease infinite alternate;
+    animation: odd-background-icon-animation 10s ease infinite alternate-reverse;
 }
 
 .skills-background-icon.icon-8 {
@@ -225,7 +224,7 @@
 
 
 /* ======================================= */
-/* MEDIA QUIERIES */
+/* ANIMATIONS */
 
 @keyframes skills-background-animation {
     0% {
@@ -233,7 +232,7 @@
     }
 
     100% {
-        transform: translate(-10%, 0%);
+        transform: translate(22%, 0%);
     }
 }
 

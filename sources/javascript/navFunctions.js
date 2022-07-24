@@ -1,40 +1,32 @@
-/*
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navList = document.getElementsByClassName('nav-list')[0]
-
-toggleButton.addEventListener('click', () => {
-    navList.classList.toggle('active')
-})
-*/
-
 const scroller = document.getElementById('Scroller');
 scroller.addEventListener('scroll', setActiveNavButton, true);
 
+const aboutMeSectionElement = document.querySelector('#AboutMe');
+const skillsSectionElement = document.querySelector('#Skills');
+const projectsSectionElement = document.querySelector('#Projects');
+const contactMeSectionElement = document.querySelector('#ContactMe');
+
 function setActiveNavButton() {
-    scrollTop = scroller.scrollTop;
-    scrollHeight = scroller.scrollHeight;
-
-    sectionHeight = scrollHeight / 4;
-
     videoInViewport();
     setProjectsBackground();
 
-    if (scrollTop == 0) {
+    if (isInViewport(aboutMeSectionElement)) {
         onClickNavButton('AboutMeNavBtn');
         window.location.hash = "AboutMe";
     }
-    else if (scrollTop == sectionHeight) {
+    else if (isInViewport(skillsSectionElement)) {
         onClickNavButton('SkillsNavBtn');
         window.location.hash = "Skills";
     }
-    else if (scrollTop == sectionHeight * 2) {
+    else if (isInViewport(projectsSectionElement)) {
         onClickNavButton('ProjectsNavBtn');
         window.location.hash = "Projects";
     }
-    else if (scrollTop == sectionHeight * 3) {
+    else if (isInViewport(contactMeSectionElement)) {
         onClickNavButton('ContactMeNavBtn');
         window.location.hash = "ContactMe";
     }
+
 }
 
 function onClickNavButton(id) {
