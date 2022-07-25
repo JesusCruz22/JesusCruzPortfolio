@@ -1,4 +1,3 @@
-
 const projectsSection = document.getElementById('Projects');
 // Get icons from background of the skills-section
 const projectsBackgroundIcons = document.getElementsByClassName('projects-background-icon');
