@@ -22,7 +22,6 @@ const observer = new IntersectionObserver((entries) => {
                 if (sections[i] == entry.target) {
                     indexActiveSection = i;
                     navItems[indexActiveSection].style.color = '#121637';
-                    window.location.hash = `#${entry.target.id}`;
                 }
             }
 
