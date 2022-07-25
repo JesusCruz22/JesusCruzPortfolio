@@ -1,39 +1,82 @@
-const scroller = document.getElementById('Scroller');
-scroller.addEventListener('scroll', setActiveNavButton, true);
+const menu = document.getElementById('Menu');
+const itemIndicator = document.getElementById('ItemIndicator');
+const navItems = menu.querySelectorAll('a');
+const sections = document.querySelectorAll('.section');
 
-const aboutMeSectionElement = document.querySelector('#AboutMe');
-const skillsSectionElement = document.querySelector('#Skills');
-const projectsSectionElement = document.querySelector('#Projects');
-const contactMeSectionElement = document.querySelector('#ContactMe');
+let indexActiveSection;
 
-function setActiveNavButton() {
-    videoInViewport();
-    setProjectsBackground();
+setIndicatorSize(0);
+setIndicatorPosition(0);
 
-    if (isInViewport(aboutMeSectionElement)) {
-        onClickNavButton('AboutMeNavBtn');
-        window.location.hash = "AboutMe";
-    }
-    else if (isInViewport(skillsSectionElement)) {
-        onClickNavButton('SkillsNavBtn');
-        window.location.hash = "Skills";
-    }
-    else if (isInViewport(projectsSectionElement)) {
-        onClickNavButton('ProjectsNavBtn');
-        window.location.hash = "Projects";
-    }
-    else if (isInViewport(contactMeSectionElement)) {
-        onClickNavButton('ContactMeNavBtn');
-        window.location.hash = "ContactMe";
-    }
+// Observer
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if(entry.isIntersecting){
+			// Obtenemos cual es la seccion que esta entrando en pantalla.
+			// console.log(`La entrada ${entrada.target.id} esta intersectando`);
 
+			// Creamos un arreglo con las secciones y luego obtenemos el index del la seccion que esta en pantalla.
+			for (let i = 0; i < sections.length; i++) {
+                navItems[i].style.color = 'white';
+
+                if (sections[i] == entry.target) {
+                    indexActiveSection = i;
+                    navItems[indexActiveSection].style.color = '#121637';
+                    window.location.hash = `#${entry.target.id}`;
+                }
+            }
+
+            console.log(indexActiveSection);
+
+			setIndicatorSize(indexActiveSection);
+            setIndicatorPosition(indexActiveSection);
+		}
+	});
+}, {
+	rootMargin: '0px 0px 0px 0px',
+	threshold: 0.2
+});
+
+// Asignamos un observador a cada una de las secciones
+sections.forEach(section => observer.observe(section));
+
+// Evento para cuando la pantalla cambie de tamaño.
+const onResize = () => {
+	// Cambiamos el tamaño del indicador.
+    setIndicatorSize(indexActiveSection);
+
+	// Volvemos a posicionar el indicador.
+	setIndicatorPosition(indexActiveSection);
 }
 
-function onClickNavButton(id) {
-    const activeNavButtons = document.getElementsByClassName('active');
-    Array.prototype.forEach.call(activeNavButtons, function (button) {
-        button.classList.remove('active');
-    });
+window.addEventListener('resize', onResize);
 
-    document.getElementById(id).classList.add('active');
+function setIndicatorSize(indexActiveItem) {
+    let itemSizeWidth = navItems[indexActiveItem].offsetWidth;
+    let itemSizeHeight = navItems[indexActiveItem].offsetHeight;
+
+    itemIndicator.style.width = `${itemSizeWidth}px`;
+    itemIndicator.style.height = `${itemSizeHeight}px`;
+
+    console.log(itemSizeWidth)
+    console.log(itemSizeHeight)
+}
+
+function setIndicatorPosition(indexActiveItem) {
+    let itemOffsetTop = getOffset(navItems[indexActiveItem]).top;
+    let itemOffsetLeft = getOffset(navItems[indexActiveItem]).left;
+
+    itemIndicator.style.top = `${itemOffsetTop}px`;
+    itemIndicator.style.left = `${itemOffsetLeft}px`
+
+    console.log(itemOffsetTop)
+    console.log(itemOffsetLeft)
+}
+
+function getOffset(element) {
+    const rect = element.getBoundingClientRect();
+    return {
+        left: rect.left + window.scrollX,
+        top: rect.top + window.scrollY
+    };
 }
