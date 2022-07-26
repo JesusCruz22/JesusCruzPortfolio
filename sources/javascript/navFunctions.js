@@ -48,8 +48,8 @@ const onResize = () => {
 window.addEventListener('resize', onResize);
 
 window.addEventListener('load', function () {
-    setIndicatorSize(indexActiveSection);
-    setIndicatorPosition(indexActiveSection);
+    setIndicatorSize(0);
+    setIndicatorPosition(0);
 });
 
 function setIndicatorSize(indexActiveItem) {
