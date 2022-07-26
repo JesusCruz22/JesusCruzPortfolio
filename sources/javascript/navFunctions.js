@@ -5,9 +5,6 @@ const sections = document.querySelectorAll('.section');
 
 let indexActiveSection;
 
-setIndicatorSize(0);
-setIndicatorPosition(0);
-
 // Observer
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
@@ -27,15 +24,13 @@ const observer = new IntersectionObserver((entries) => {
                 }
             }
 
-            console.log(indexActiveSection);
-
 			setIndicatorSize(indexActiveSection);
             setIndicatorPosition(indexActiveSection);
 		}
 	});
 }, {
 	rootMargin: '0px 0px 0px 0px',
-	threshold: 0.2
+	threshold: 0.5
 });
 
 // Asignamos un observador a cada una de las secciones
@@ -52,15 +47,17 @@ const onResize = () => {
 
 window.addEventListener('resize', onResize);
 
+window.addEventListener('load', function () {
+    setIndicatorSize(indexActiveSection);
+    setIndicatorPosition(indexActiveSection);
+});
+
 function setIndicatorSize(indexActiveItem) {
     let itemSizeWidth = navItems[indexActiveItem].offsetWidth;
     let itemSizeHeight = navItems[indexActiveItem].offsetHeight;
 
     itemIndicator.style.width = `${itemSizeWidth}px`;
     itemIndicator.style.height = `${itemSizeHeight}px`;
-
-    console.log(itemSizeWidth)
-    console.log(itemSizeHeight)
 }
 
 function setIndicatorPosition(indexActiveItem) {
@@ -68,10 +65,7 @@ function setIndicatorPosition(indexActiveItem) {
     let itemOffsetLeft = getOffset(navItems[indexActiveItem]).left;
 
     itemIndicator.style.top = `${itemOffsetTop}px`;
-    itemIndicator.style.left = `${itemOffsetLeft}px`
-
-    console.log(itemOffsetTop)
-    console.log(itemOffsetLeft)
+    itemIndicator.style.left = `${itemOffsetLeft}px`;
 }
 
 function getOffset(element) {

@@ -1,7 +1,7 @@
 const scroller = document.getElementById('Scroller');
-scroller.addEventListener('scroll', setProjectsSection, true);
+scroller.addEventListener('scroll', scrollAction, true);
 
-function setProjectsSection() {
+function scrollAction() {
     videoInViewport();
     setProjectsBackground();
 }
