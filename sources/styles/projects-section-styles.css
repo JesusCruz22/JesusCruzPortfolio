@@ -66,18 +66,12 @@
 }
 
 .project-article {
-    transition: all 0.2s ease;
     position: relative;
     padding: 0;
     border-radius: 15px;
     color: white;
 }
 
-.project-article:hover {
-    transition: all 0.2s ease;
-    transform: scale(.98, .98);
-    border-radius: 25px;
-}
 
 .project-grid-container {
     display: flex;
@@ -105,12 +99,18 @@
 }
 
 .project-video {
+    transition: all 0.2s ease;
     width: 90vw;
     height: 100%;
     border-radius: 15px;
     margin: .5em auto;
     border: 1.5px #2f2f2f8f solid;
     background-color: black;
+}
+
+.project-video:hover {
+    transition: all 0.2s ease;
+    transform: scale(.98, .98);
 }
 
 .content-project-card {
@@ -204,7 +204,7 @@
     gap: 2rem;
     align-items: center;
     opacity: 0;
-    animation: projects-background-animation 55s ease infinite alternate, slidein 5s ease 5s forwards;
+    animation: projects-background-animation 55s ease infinite alternate, slidein 5s ease 5.5s forwards;
     overflow: hidden;
 }
 

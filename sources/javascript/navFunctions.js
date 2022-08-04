@@ -8,8 +8,6 @@ let indexActiveSection;
 // Observer
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
-        videoInViewport();
-
 		if(entry.isIntersecting){
 			// Obtenemos cual es la seccion que esta entrando en pantalla.
 			// console.log(`La entrada ${entrada.target.id} esta intersectando`);

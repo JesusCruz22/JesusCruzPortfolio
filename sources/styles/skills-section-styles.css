@@ -30,6 +30,7 @@
     height: 40px;
     background-color: transparent;
     border: 0;
+    cursor: pointer;
 }
 
 .right-arrow-image, .left-arrow-image {
