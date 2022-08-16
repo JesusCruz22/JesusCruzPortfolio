@@ -45,7 +45,7 @@ const onResize = () => {
 
 window.addEventListener('resize', onResize);
 
-window.addEventListener('load', function () {
+window.addEventListener('load', () => {
     setIndicatorSize(0);
     setIndicatorPosition(0);
 });
