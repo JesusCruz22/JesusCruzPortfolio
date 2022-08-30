@@ -11,16 +11,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="sources/styles/glider.min.css" type="text/css">
-    <link rel="stylesheet" href="sources/styles/styles.css" type="text/css">
-    <link rel="stylesheet" href="sources/styles/scroll-bar-styles.css" type="text/css">
-    <link rel="stylesheet" href="sources/styles/button-styles.css" type="text/css">
-    <link rel="stylesheet" href="sources/styles/nav-styles.css" type="text/css">
-    <link rel="stylesheet" href="sources/styles/header-styles.css" type="text/css">
-    <link rel="stylesheet" href="sources/styles/about-section-styles.css" type="text/css">
-    <link rel="stylesheet" href="sources/styles/skills-section-styles.css" type="text/css">
-    <link rel="stylesheet" href="sources/styles/projects-section-styles.css" type="text/css">
-    <link rel="stylesheet" href="sources/styles/footer-styles.css" type="text/css">
+    <link rel="stylesheet" href="sources/styles/glider.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="sources/styles/styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="sources/styles/scroll-bar-styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="sources/styles/button-styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="sources/styles/nav-styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="sources/styles/header-styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="sources/styles/about-section-styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="sources/styles/skills-section-styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="sources/styles/projects-section-styles.css" type="text/css" media="all">
+    <link rel="stylesheet" href="sources/styles/footer-styles.css" type="text/css" media="all">
+
+    <script async defer src="sources/javascript/glider.min.js"></script>
+    <script async defer src="sources/javascript/navFunctions.js"></script>
+    <script async defer src="sources/javascript/skillsCarouselSystem.js"></script>
+    <script async defer src="sources/javascript/projectsCarouselSystem.js"></script>
+    <script async defer src="sources/javascript/autoplayVideoSystem.js"></script>
 
     <title>Jesus Cruz - Portfolio</title>
 </head>
@@ -91,7 +97,8 @@
                             alt="Go to my LinkedIn profile">
                     </a>
                     <a class="github-icon" role="button" href="https://github.com/JesusCruz22" target="_blank">
-                        <img loading="lazy" src="sources/images/github-icon.png" title="GitHub Profile" alt="Go to my GitHub profile">
+                        <img loading="lazy" src="sources/images/github-icon.png" title="GitHub Profile"
+                            alt="Go to my GitHub profile">
                     </a>
                 </section>
                 <!-- END SOCIAL HEADER BUTTONS SECTION -->
@@ -146,13 +153,14 @@
                     <article id="htmlCard" class="skill-card" onmouseover="setSkillsBackground(this.id)"
                         onmouseout="setSkillsDefaultBackground()">
                         <h3>HTML</h3>
-                        <img loading="lazy" class="card-image" src="sources/images/html-icon.png" title="HTML" alt="HTML5 Icon">
+                        <img loading="lazy" class="card-image" src="sources/images/html-icon.png" title="HTML"
+                            alt="HTML5 Icon">
 
                         <div class="xp-card-section">
                             <p class="xp-title">ADVANCED</p>
                             <p class="xp-projects">USED IN 1 PROJECT</p>
                         </div>
-                        
+
                         <div class="xp-description">
                             <li>My first step towards learning HTML was to read all the documentation on W3School.</li>
                             <li>To get more resources, I also research other documentation, such as MDN.</li>
@@ -166,7 +174,8 @@
                     <article id="cssCard" class="skill-card" onmouseover="setSkillsBackground(this.id)"
                         onmouseout="setSkillsDefaultBackground()">
                         <h3>CSS</h3>
-                        <img loading="lazy" class="card-image" src="sources/images/css-icon.png" title="CSS" alt="CSS3 Icon">
+                        <img loading="lazy" class="card-image" src="sources/images/css-icon.png" title="CSS"
+                            alt="CSS3 Icon">
 
                         <div class="xp-card-section">
                             <p class="xp-title">ADVANCED</p>
@@ -175,9 +184,11 @@
 
                         <div class="xp-description">
                             <li>I read all the CSS documentation at W3School.</li>
-                            <li>I made layouts with a grid view and flexbox using the box model, positioning, and display.</li>
+                            <li>I made layouts with a grid view and flexbox using the box model, positioning, and
+                                display.</li>
                             <li>I learn to do animations and implement responsive design with the media queries.</li>
-                            <li>To improve with this tool, I must learn BEM, SASS, Styled components, and CSS modules.</li>
+                            <li>To improve with this tool, I must learn BEM, SASS, Styled components, and CSS modules.
+                            </li>
                         </div>
                     </article>
                     <!-- END CSS CARD -->
@@ -195,7 +206,8 @@
                         </div>
 
                         <div class="xp-description">
-                            <li>While working on projects, I learned Javascript, and I searched for specific solutions on Google to resolve issues.</li>
+                            <li>While working on projects, I learned Javascript, and I searched for specific solutions
+                                on Google to resolve issues.</li>
                             <li>I learn the basics of Javascript, but no good practices or advanced features.</li>
                             <li>Currently, I'm reading Javascript.info's complete guide.</li>
                         </div>
@@ -206,7 +218,8 @@
                     <article id="reactCard" class="skill-card" onmouseover="setSkillsBackground(this.id)"
                         onmouseout="setSkillsDefaultBackground()">
                         <h3>ReactJS</h3>
-                        <img loading="lazy" class="card-image" src="sources/images/react-icon.png" title="React JS" alt="REACT Icon">
+                        <img loading="lazy" class="card-image" src="sources/images/react-icon.png" title="React JS"
+                            alt="REACT Icon">
                         <div class="xp-card-section">
                             <p class="xp-title">BASIC</p>
                             <p class="xp-projects">USED IN 1 PROJECT</p>
@@ -220,14 +233,15 @@
                     <article id="csharpCard" class="skill-card" onmouseover="setSkillsBackground(this.id)"
                         onmouseout="setSkillsDefaultBackground()">
                         <h3>C#</h3>
-                        <img loading="lazy" class="card-image" src="sources/images/csharp-icon.png" title="C#" alt="C# Icon">
+                        <img loading="lazy" class="card-image" src="sources/images/csharp-icon.png" title="C#"
+                            alt="C# Icon">
 
                         <div class="xp-card-section">
                             <p class="xp-title">INTERMEDIATE</p>
                             <p class="xp-projects">USED IN 1 PROJECT</p>
                         </div>
 
-                        
+
                         <div class="xp-description">CSHARP</div>
                     </article>
                     <!-- END C# CARD -->
@@ -236,7 +250,8 @@
                     <article id="unityCard" class="skill-card" onmouseover="setSkillsBackground(this.id)"
                         onmouseout="setSkillsDefaultBackground()">
                         <h3>Unity</h3>
-                        <img loading="lazy" class="card-image" src="sources/images/unity-icon.png" title="Unity" alt="Unity Icon">
+                        <img loading="lazy" class="card-image" src="sources/images/unity-icon.png" title="Unity"
+                            alt="Unity Icon">
 
                         <div class="xp-card-section">
                             <p class="xp-title">INTERMEDIATE</p>
@@ -251,7 +266,8 @@
                     <article id="javaCard" class="skill-card" onmouseover="setSkillsBackground(this.id)"
                         onmouseout="setSkillsDefaultBackground()">
                         <h3>Java</h3>
-                        <img loading="lazy" class="card-image" src="sources/images/java-icon.png" title="JAVA" alt="JAVA Icon">
+                        <img loading="lazy" class="card-image" src="sources/images/java-icon.png" title="JAVA"
+                            alt="JAVA Icon">
 
                         <div class="xp-card-section">
                             <p class="xp-title">BASIC</p>
@@ -285,10 +301,10 @@
         <section id="Projects" class="projects-section section">
             <!-- BACKGROUND PROJECTS -->
             <section class="projects-background">
-                <img  class="projects-background-icon icon-1" src="sources/images/plus-icon.svg">
-                <img  class="projects-background-icon icon-2" src="sources/images/minus-icon.svg">
-                <img  class="projects-background-icon icon-3" src="sources/images/division-icon.svg">
-                <img  class="projects-background-icon icon-4" src="sources/images/multiplication-icon.svg">
+                <img class="projects-background-icon icon-1" src="sources/images/plus-icon.svg">
+                <img class="projects-background-icon icon-2" src="sources/images/minus-icon.svg">
+                <img class="projects-background-icon icon-3" src="sources/images/division-icon.svg">
+                <img class="projects-background-icon icon-4" src="sources/images/multiplication-icon.svg">
             </section>
             <!-- END BACKGROUND PROJECTS -->
 
@@ -316,33 +332,28 @@
                                     <!-- DETAILS OF THE PROJECT -->
                                     <section class="details-project-section">
                                         <h4>Details</h4>
-                                        <p>
-                                            My first project with HTML, CSS and Javascript.
-                                            <br>
-                                            Page without responsive design and unnecessarily long
-                                            javascript code.
-                                            <br>
-                                            Calculates addition, subtraction, division and
-                                            multiplication between two numbers.
-                                            <br>
-                                            Allows integer and float values.
-                                        </p>
+                                        <p>My first project with HTML, CSS and Javascript.</p>
+                                        <p>Page without responsive design and unnecessarily long
+                                            javascript code.</p>
+                                        <p>Calculates addition, subtraction, division and
+                                            multiplication between two numbers.</p>
+                                        <p>Allows integer and float values.</p>
                                     </section>
                                     <!-- END DETAILS OF THE PROJECT -->
 
                                     <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                                    <section class="project-tecnologies">
-                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png" title="HTML"
-                                            alt="HTML Icon">
-                                            <p class="tech-porcent">15.8%</p>
+                                    <section class="project-technologies">
+                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png"
+                                            title="HTML" alt="HTML Icon">
+                                        <p class="tech-percent">15.8%</p>
 
-                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png" title="CSS"
-                                            alt="CSS Icon">
-                                            <p class="tech-porcent">27.8%</p>
+                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png"
+                                            title="CSS" alt="CSS Icon">
+                                        <p class="tech-percent">27.8%</p>
 
-                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png" title="JavaScript"
-                                            alt="Javascript Icon">
-                                            <p class="tech-porcent">56.4%</p>
+                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png"
+                                            title="JavaScript" alt="Javascript Icon">
+                                        <p class="tech-percent">56.4%</p>
                                     </section>
                                     <!--  END ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
 
@@ -351,8 +362,9 @@
                                         <!-- CODE BUTTON -->
                                         <a class="github-icon" role="button"
                                             href="https://github.com/JesusCruz22/Calculadora" target="_blank">
-                                            <img loading="lazy" class="project-icons" src="sources/images/github-icon.png"
-                                                title="Github" alt="View code on GitHub">
+                                            <img loading="lazy" class="project-icons"
+                                                src="sources/images/github-icon.png" title="Github"
+                                                alt="View code on GitHub">
                                             Code
                                         </a>
                                         <!-- RUN PROJECT BUTTON -->
@@ -389,33 +401,28 @@
                                     <!-- DETAILS OF THE PROJECT -->
                                     <section class="details-project-section">
                                         <h4>Details</h4>
-                                        <p>
-                                            My first project with HTML, CSS and Javascript.
-                                            <br>
-                                            Page without responsive design and unnecessarily long
-                                            javascript code.
-                                            <br>
-                                            Calculates addition, subtraction, division and
-                                            multiplication between two numbers.
-                                            <br>
-                                            Allows integer and float values.
-                                        </p>
+                                        <p>My first project with HTML, CSS and Javascript.</p>
+                                        <p>Page without responsive design and unnecessarily long
+                                            javascript code.</p>
+                                        <p>Calculates addition, subtraction, division and
+                                            multiplication between two numbers.</p>
+                                        <p>Allows integer and float values.</p>
                                     </section>
                                     <!-- END DETAILS OF THE PROJECT -->
 
                                     <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                                    <section class="project-tecnologies">
-                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png" title="HTML"
-                                            alt="HTML Icon">
-                                        <p class="tech-porcent">11.5%</p>
+                                    <section class="project-technologies">
+                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png"
+                                            title="HTML" alt="HTML Icon">
+                                        <p class="tech-percent">11.5%</p>
 
-                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png" title="CSS"
-                                            alt="CSS Icon">
-                                        <p class="tech-porcent">24.9%</p>
-                                        
-                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png" title="JavaScript"
-                                            alt="JavaScript Icon">
-                                        <p class="tech-porcent">63.6%</p>
+                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png"
+                                            title="CSS" alt="CSS Icon">
+                                        <p class="tech-percent">24.9%</p>
+
+                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png"
+                                            title="JavaScript" alt="JavaScript Icon">
+                                        <p class="tech-percent">63.6%</p>
                                     </section>
                                     <!--  END ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
 
@@ -424,14 +431,14 @@
                                         <!-- CODE BUTTON -->
                                         <a class="github-icon" role="button"
                                             href="https://github.com/JesusCruz22/Pong-Clone" target="_blank">
-                                            <img loading="lazy" class="project-icons" src="sources/images/github-icon.png"
-                                                title="Github" alt="View code on GitHub"
-                                                style="width: 25px; height: auto;">
+                                            <img loading="lazy" class="project-icons"
+                                                src="sources/images/github-icon.png" title="Github"
+                                                alt="View code on GitHub" style="width: 25px; height: auto;">
                                             Code
                                         </a>
                                         <!-- RUN PROJECT BUTTON -->
-                                        <a class="run-project-icon" role="button"
-                                            href="projects/pong-clone/index.html" target="_blank">
+                                        <a class="run-project-icon" role="button" href="projects/pong-clone/index.html"
+                                            target="_blank">
                                             <img loading="lazy" class="project-icons" src="sources/images/link-icon.png"
                                                 title="Run Project" alt="Open project in a new tab"
                                                 style="width: 25px; height: auto;">
@@ -456,7 +463,7 @@
 
                                 <!-- SCREENSHOT OF THE PROJECT -->
                                 <video class="project-video" muted controls loop preload="auto">
-                                    <source src="sources/videos/video-basic-calculator.mp4" type="video/mp4">
+                                    <source src="sources/videos/FrutimathProgress_01.mp4" type="video/mp4">
                                 </video>
                                 <!-- END SCREENSHOT OF THE PROJECT -->
 
@@ -464,28 +471,28 @@
                                     <!-- DETAILS OF THE PROJECT -->
                                     <section class="details-project-section">
                                         <h4>Details</h4>
-                                        <p>
-                                            My first project with HTML, CSS and Javascript.
-                                            <br>
-                                            Page without responsive design and unnecessarily long
-                                            javascript code.
-                                            <br>
-                                            Calculates addition, subtraction, division and
-                                            multiplication between two numbers.
-                                            <br>
-                                            Allows integer and float values.
-                                        </p>
+                                        <p>My first project with HTML, CSS and Javascript.</p>
+                                        <p>Page without responsive design and unnecessarily long
+                                            javascript code.</p>
+                                        <p>Calculates addition, subtraction, division and
+                                            multiplication between two numbers.</p>
+                                        <p>Allows integer and float values.</p>
                                     </section>
                                     <!-- END DETAILS OF THE PROJECT -->
 
                                     <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                                    <section class="project-tecnologies">
-                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png" title="HTML"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png" title="CSS"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png" title="JavaScript"
-                                            alt="HTML Icon">
+                                    <section class="project-technologies">
+                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png"
+                                            title="HTML" alt="HTML Icon">
+                                        <p class="tech-percent">9.8%</p>
+
+                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png"
+                                            title="CSS" alt="CSS Icon">
+                                        <p class="tech-percent">28.6%</p>
+
+                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png"
+                                            title="JavaScript" alt="JavaScript Icon">
+                                        <p class="tech-percent">48.6%</p>
                                     </section>
                                     <!--  END ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
 
@@ -494,8 +501,9 @@
                                         <!-- CODE BUTTON -->
                                         <a class="github-icon" role="button"
                                             href="https://github.com/JesusCruz22/Calculadora" target="_blank">
-                                            <img loading="lazy" class="project-icons" src="sources/images/github-icon.png"
-                                                title="Github" alt="View code on GitHub">
+                                            <img loading="lazy" class="project-icons"
+                                                src="sources/images/github-icon.png" title="Github"
+                                                alt="View code on GitHub">
                                             Code
                                         </a>
                                         <!-- RUN PROJECT BUTTON -->
@@ -519,12 +527,12 @@
                         <figure>
                             <section class="project-grid-container">
                                 <!-- PROJECT TITLE -->
-                                <h3>4. Mini Store Online</h3>
+                                <h3>4. Mini Tienda Online</h3>
                                 <!-- END PROJECT TITLE -->
 
                                 <!-- SCREENSHOT OF THE PROJECT -->
                                 <video class="project-video" controls loop preload="auto">
-                                    <source src="sources/videos/video-basic-calculator.mp4" type="video/mp4">
+                                    <source src="sources/videos/video-mini-tineda-online.mp4" type="video/mp4">
                                 </video>
                                 <!-- END SCREENSHOT OF THE PROJECT -->
 
@@ -532,28 +540,27 @@
                                     <!-- DETAILS OF THE PROJECT -->
                                     <section class="details-project-section">
                                         <h4>Details</h4>
-                                        <p>
-                                            My first project with HTML, CSS and Javascript.
-                                            <br>
-                                            Page without responsive design and unnecessarily long
-                                            javascript code.
-                                            <br>
-                                            Calculates addition, subtraction, division and
-                                            multiplication between two numbers.
-                                            <br>
-                                            Allows integer and float values.
-                                        </p>
+                                        <p>I did this project in college with java for backend.</p>
+                                        <p>But in this new version i only use Javascript.</p>
+                                        <p>In the old version, the data was into a java file.</p>
+                                        <p>But now I use Firebase services to save data and images.</p>
+                                        <p>To publish this site i use Firebase Hosting.</p>
                                     </section>
                                     <!-- END DETAILS OF THE PROJECT -->
 
                                     <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                                    <section class="project-tecnologies">
-                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png" title="HTML"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png" title="CSS"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png" title="JavaScript"
-                                            alt="HTML Icon">
+                                    <section class="project-technologies">
+                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png"
+                                            title="HTML" alt="HTML Icon">
+                                        <p class="tech-percent">9.8%</p>
+
+                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png"
+                                            title="CSS" alt="CSS Icon">
+                                        <p class="tech-percent">28.6%</p>
+
+                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png"
+                                            title="JavaScript" alt="JavaScript Icon">
+                                        <p class="tech-percent">48.6%</p>
                                     </section>
                                     <!--  END ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
 
@@ -561,15 +568,15 @@
                                     <section class="buttons-project-section">
                                         <!-- CODE BUTTON -->
                                         <a class="github-icon" role="button"
-                                            href="https://github.com/JesusCruz22/Calculadora" target="_blank">
-                                            <img loading="lazy" class="project-icons" src="sources/images/github-icon.png"
-                                                title="Github" alt="View code on GitHub"
-                                                style="width: 25px; height: auto;">
+                                            href="https://github.com/JesusCruz22/Mini-Tienda-Online" target="_blank">
+                                            <img loading="lazy" class="project-icons"
+                                                src="sources/images/github-icon.png" title="Github"
+                                                alt="View code on GitHub" style="width: 25px; height: auto;">
                                             Code
                                         </a>
                                         <!-- RUN PROJECT BUTTON -->
                                         <a class="run-project-icon" role="button"
-                                            href="projects/basic-calculator/index.html" target="_blank">
+                                            href="https://minitiendaonline.web.app" target="_blank">
                                             <img loading="lazy" class="project-icons" src="sources/images/link-icon.png"
                                                 title="Run Project" alt="Open project in a new tab"
                                                 style="width: 25px; height: auto;">
@@ -602,28 +609,23 @@
                                     <!-- DETAILS OF THE PROJECT -->
                                     <section class="details-project-section">
                                         <h4>Details</h4>
-                                        <p>
-                                            My first project with HTML, CSS and Javascript.
-                                            <br>
-                                            Page without responsive design and unnecessarily long
-                                            javascript code.
-                                            <br>
-                                            Calculates addition, subtraction, division and
-                                            multiplication between two numbers.
-                                            <br>
-                                            Allows integer and float values.
-                                        </p>
+                                        <p>My first project with HTML, CSS and Javascript.</p>
+                                        <p>Page without responsive design and unnecessarily long
+                                            javascript code.</p>
+                                        <p>Calculates addition, subtraction, division and
+                                            multiplication between two numbers.</p>
+                                        <p>Allows integer and float values.</p>
                                     </section>
                                     <!-- END DETAILS OF THE PROJECT -->
 
                                     <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                                    <section class="project-tecnologies">
-                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png" title="HTML"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png" title="CSS"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png" title="JavaScript"
-                                            alt="HTML Icon">
+                                    <section class="project-technologies">
+                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png"
+                                            title="HTML" alt="HTML Icon">
+                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png"
+                                            title="CSS" alt="HTML Icon">
+                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png"
+                                            title="JavaScript" alt="HTML Icon">
                                     </section>
                                     <!--  END ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
 
@@ -632,8 +634,9 @@
                                         <!-- CODE BUTTON -->
                                         <a class="github-icon" role="button"
                                             href="https://github.com/JesusCruz22/Calculadora" target="_blank">
-                                            <img loading="lazy" class="project-icons" src="sources/images/github-icon.png"
-                                                title="Github" alt="View code on GitHub">
+                                            <img loading="lazy" class="project-icons"
+                                                src="sources/images/github-icon.png" title="Github"
+                                                alt="View code on GitHub">
                                             Code
                                         </a>
                                         <!-- RUN PROJECT BUTTON -->
@@ -670,28 +673,23 @@
                                     <!-- DETAILS OF THE PROJECT -->
                                     <section class="details-project-section">
                                         <h4>Details</h4>
-                                        <p>
-                                            My first project with HTML, CSS and Javascript.
-                                            <br>
-                                            Page without responsive design and unnecessarily long
-                                            javascript code.
-                                            <br>
-                                            Calculates addition, subtraction, division and
-                                            multiplication between two numbers.
-                                            <br>
-                                            Allows integer and float values.
-                                        </p>
+                                        <p>My first project with HTML, CSS and Javascript.</p>
+                                        <p>Page without responsive design and unnecessarily long
+                                            javascript code.</p>
+                                        <p>Calculates addition, subtraction, division and
+                                            multiplication between two numbers.</p>
+                                        <p>Allows integer and float values.</p>
                                     </section>
                                     <!-- END DETAILS OF THE PROJECT -->
 
                                     <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                                    <section class="project-tecnologies">
-                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png" title="HTML"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png" title="CSS"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png" title="JavaScript"
-                                            alt="HTML Icon">
+                                    <section class="project-technologies">
+                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png"
+                                            title="HTML" alt="HTML Icon">
+                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png"
+                                            title="CSS" alt="HTML Icon">
+                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png"
+                                            title="JavaScript" alt="HTML Icon">
                                     </section>
                                     <!--  END ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
 
@@ -700,9 +698,9 @@
                                         <!-- CODE BUTTON -->
                                         <a class="github-icon" role="button"
                                             href="https://github.com/JesusCruz22/Calculadora" target="_blank">
-                                            <img loading="lazy" class="project-icons" src="sources/images/github-icon.png"
-                                                title="Github" alt="View code on GitHub"
-                                                style="width: 25px; height: auto;">
+                                            <img loading="lazy" class="project-icons"
+                                                src="sources/images/github-icon.png" title="Github"
+                                                alt="View code on GitHub" style="width: 25px; height: auto;">
                                             Code
                                         </a>
                                         <!-- RUN PROJECT BUTTON -->
@@ -740,28 +738,23 @@
                                     <!-- DETAILS OF THE PROJECT -->
                                     <section class="details-project-section">
                                         <h4>Details</h4>
-                                        <p>
-                                            My first project with HTML, CSS and Javascript.
-                                            <br>
-                                            Page without responsive design and unnecessarily long
-                                            javascript code.
-                                            <br>
-                                            Calculates addition, subtraction, division and
-                                            multiplication between two numbers.
-                                            <br>
-                                            Allows integer and float values.
-                                        </p>
+                                        <p>My first project with HTML, CSS and Javascript.</p>
+                                        <p>Page without responsive design and unnecessarily long
+                                            javascript code.</p>
+                                        <p>Calculates addition, subtraction, division and
+                                            multiplication between two numbers.</p>
+                                        <p>Allows integer and float values.</p>
                                     </section>
                                     <!-- END DETAILS OF THE PROJECT -->
 
                                     <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                                    <section class="project-tecnologies">
-                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png" title="HTML"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png" title="CSS"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png" title="JavaScript"
-                                            alt="HTML Icon">
+                                    <section class="project-technologies">
+                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png"
+                                            title="HTML" alt="HTML Icon">
+                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png"
+                                            title="CSS" alt="HTML Icon">
+                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png"
+                                            title="JavaScript" alt="HTML Icon">
                                     </section>
                                     <!--  END ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
 
@@ -770,8 +763,9 @@
                                         <!-- CODE BUTTON -->
                                         <a class="github-icon" role="button"
                                             href="https://github.com/JesusCruz22/Calculadora" target="_blank">
-                                            <img loading="lazy" class="project-icons" src="sources/images/github-icon.png"
-                                                title="Github" alt="View code on GitHub">
+                                            <img loading="lazy" class="project-icons"
+                                                src="sources/images/github-icon.png" title="Github"
+                                                alt="View code on GitHub">
                                             Code
                                         </a>
                                         <!-- RUN PROJECT BUTTON -->
@@ -823,13 +817,13 @@
                                     <!-- END DETAILS OF THE PROJECT -->
 
                                     <!-- ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
-                                    <section class="project-tecnologies">
-                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png" title="HTML"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png" title="CSS"
-                                            alt="HTML Icon">
-                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png" title="JavaScript"
-                                            alt="HTML Icon">
+                                    <section class="project-technologies">
+                                        <img loading="lazy" class="project-icons" src="sources/images/html-icon.png"
+                                            title="HTML" alt="HTML Icon">
+                                        <img loading="lazy" class="project-icons" src="sources/images/css-icon.png"
+                                            title="CSS" alt="HTML Icon">
+                                        <img loading="lazy" class="project-icons" src="sources/images/js-icon.png"
+                                            title="JavaScript" alt="HTML Icon">
                                     </section>
                                     <!--  END ICONS OF THE TECHNOLOGIES USED IN THE PROJECT -->
 
@@ -838,9 +832,9 @@
                                         <!-- CODE BUTTON -->
                                         <a class="github-icon" role="button"
                                             href="https://github.com/JesusCruz22/Calculadora" target="_blank">
-                                            <img loading="lazy" class="project-icons" src="sources/images/github-icon.png"
-                                                title="Github" alt="View code on GitHub"
-                                                style="width: 25px; height: auto;">
+                                            <img loading="lazy" class="project-icons"
+                                                src="sources/images/github-icon.png" title="Github"
+                                                alt="View code on GitHub" style="width: 25px; height: auto;">
                                             Code
                                         </a>
                                         <!-- RUN PROJECT BUTTON -->
@@ -891,22 +885,17 @@
             <section class="buttons-section">
                 <a class="linkedin-icon" role="button" href="https://www.linkedin.com/in/jesus-cruz-5a03b81b5"
                     target="_blank">
-                    <img loading="lazy" src="sources/images/linkedin-icon.png" title="LinkedIn Profile" alt="Small image of resume">
+                    <img loading="lazy" src="sources/images/linkedin-icon.png" title="LinkedIn Profile"
+                        alt="Small image of resume">
                 </a>
                 <a class="github-icon" role="button" href="https://github.com/JesusCruz22" target="_blank">
-                    <img loading="lazy" src="sources/images/github-icon.png" title="GitHub Profile" alt="Small image of resume">
+                    <img loading="lazy" src="sources/images/github-icon.png" title="GitHub Profile"
+                        alt="Small image of resume">
                 </a>
             </section>
         </footer>
         <!-- END FOOTER -->
     </article>
-
-    <script src="sources/javascript/glider.min.js"></script>   
-    <script src="sources/javascript/scrollListener.js"></script>
-    <script src="sources/javascript/navFunctions.js"></script>
-    <script src="sources/javascript/skillsCarouselSystem.js"></script>
-    <script src="sources/javascript/projectsCarouselSystem.js"></script>
-    <script src="sources/javascript/autoplayVideoSystem.js"></script>
 </body>
 
 </html>
