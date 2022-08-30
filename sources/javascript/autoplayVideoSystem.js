@@ -1,21 +1,17 @@
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+const projectVideos = document.querySelectorAll('.project-video');
 
-    );
-}
-
-function videoInViewport() {
-    const projectVideos = document.querySelectorAll('.project-video');
-
-    projectVideos.forEach(element => {
-        if(isInViewport(element)) element.play();
-        else element.pause();
+// Projects videos Observer
+const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.play();
+        else entry.target.pause();
+        
+        setProjectsBackground();
     });
-}
+}, {
+    rootMargin: '0px 0px 0px 0px',
+    threshold: 1.0
+});
 
+projectVideos.forEach(video => videoObserver.observe(video));
 
