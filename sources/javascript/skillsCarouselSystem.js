@@ -13,7 +13,7 @@ let skillsIconsPaths = [
 // Get skills-section elemento to change its background later
 const skillsSection = document.getElementById('Skills');
 // Get icons from background of the skills-section
-const skillsBackgroundIcons = document.getElementsByClassName('skills-background-icon');
+const skillsBackgroundIcons = document.querySelectorAll('.skills-background-icon');
 
 // Set carousel configuration
 window.addEventListener('load', function () {
@@ -62,52 +62,31 @@ function setSkillsBackground(card) {
 	switch (card) {
 		case "htmlCard":
 			//skillsSection.classList.add('html');
-
-			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
-				icon.src = "sources/images/html-icon-gris.svg";
-			});
+			setSkillsBackgroundIcons('sources/images/html-icon-gris.svg');
 			break;
 		case "cssCard":
 			//skillsSection.classList.add('css');
-
-			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
-				icon.src = "sources/images/css3-icon-gris.svg";
-			});
+			setSkillsBackgroundIcons('sources/images/css3-icon-gris.svg');
 			break;
 		case "jsCard":
 			//skillsSection.classList.add('js');
-
-			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
-				icon.src = "sources/images/js-icon-gris.svg";
-			});
+			setSkillsBackgroundIcons('sources/images/js-icon-gris.svg');
 			break;
 		case "reactCard":
 			//skillsSection.classList.add('react');
-
-			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
-				icon.src = "sources/images/react-icon-gris.svg";
-			});
+			setSkillsBackgroundIcons('sources/images/react-icon-gris.svg');
 			break;
 		case "csharpCard":
 			//skillsSection.classList.add('csharp');
-
-			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
-				icon.src = "sources/images/csharp-icon-gris.svg";
-			});
+			setSkillsBackgroundIcons('sources/images/csharp-icon-gris.svg');
 			break;
 		case "unityCard":
 			//skillsSection.classList.add('unity');
-
-			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
-				icon.src = "sources/images/unity-icon-gris.svg";
-			});
+			setSkillsBackgroundIcons('sources/images/unity-icon-gris.svg');
 			break;
 		case "javaCard":
 			//skillsSection.classList.add('java');
-
-			Array.prototype.forEach.call(skillsBackgroundIcons, function (icon) {
-				icon.src = "sources/images/java-icon-gris.svg";
-			});
+			setSkillsBackgroundIcons('sources/images/java-icon-gris.svg');
 			break;
 	}
 	//skillsSection.style.background = 'radial-gradient(circle, #FF5722, #E64C1E, #BF4019, #802A11, #BF4019, #E64C1E, #FF5722)';
@@ -133,6 +112,12 @@ function setSkillsDefaultBackground() {
 	for (var i = 0; i < skillsIconsPaths.length; i++) {
 		skillsBackgroundIcons[i].src = skillsIconsPaths[i];
 	}
+}
+
+function setSkillsBackgroundIcons(source) {
+	skillsBackgroundIcons.forEach(icon => {
+		icon.src = source;
+	});
 }
 
 // Shuffle any array

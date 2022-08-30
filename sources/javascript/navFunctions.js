@@ -6,7 +6,7 @@ const sections = document.querySelectorAll('.section');
 let indexActiveSection;
 
 // Observer
-const observer = new IntersectionObserver((entries) => {
+const navSectionObserver = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
 		if(entry.isIntersecting){
 			// Obtenemos cual es la seccion que esta entrando en pantalla.
@@ -32,7 +32,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 // Asignamos un observador a cada una de las secciones
-sections.forEach(section => observer.observe(section));
+sections.forEach(section => navSectionObserver.observe(section));
 
 // Evento para cuando la pantalla cambie de tamaño.
 const onResize = () => {

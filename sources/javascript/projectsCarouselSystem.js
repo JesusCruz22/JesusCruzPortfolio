@@ -44,29 +44,20 @@ function setProjectsBackground() {
     switch (visibleProjectArticle.id) {
         case 'BasicCalculator':
             projectsSection.classList.add('basicCalculator');
-
-            for (var i = 0; i < basicCalculatorIconsPaths.length; i++) {
-                projectsBackgroundIcons[i].src = basicCalculatorIconsPaths[i];
+            for (var i = 0; i < projectsBackgroundIcons.length; i++) {
+                projectsBackgroundIcons[i].src =  basicCalculatorIconsPaths[i];
             }
-
-            for (var i = basicCalculatorIconsPaths.length; i < projectsBackgroundIcons.length; i++) {
-                projectsBackgroundIcons[i].src = "";
-            }
-
             break;
         case 'PongClone':
             projectsSection.classList.add('pongClone');
-
-            for (var i = 0; i < projectsBackgroundIcons.length; i++) {
-                projectsBackgroundIcons[i].src = "sources/images/pong-clone-icon.svg";
-            }
-
+            setBackgroundIcons('sources/images/pong-clone-icon.svg');
             break;
         case 'FrutiMath':
             projectsSection.classList.add('frutiMath');
             break;
         case 'MiniStoreOnline':
             projectsSection.classList.add('miniStoreOnline');
+            setBackgroundIcons('sources/images/mini-tienda-online-icon.svg');
             break;
         case 'SnakeClone':
             projectsSection.classList.add('snakeClone');
@@ -80,6 +71,12 @@ function setProjectsBackground() {
         case 'InfinityBox':
             projectsSection.classList.add('infinityBox');
             break;
+    }
+}
+
+function setBackgroundIcons(source) {
+    for (var i = 0; i < projectsBackgroundIcons.length; i++) {
+        projectsBackgroundIcons[i].src = source;
     }
 }
 
