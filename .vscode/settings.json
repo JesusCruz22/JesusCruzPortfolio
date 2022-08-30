@@ -1,3 +1,6 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "files.autoSave": "onWindowChange",
+    "editor.wordWrap": "off",
+    "editor.experimental.stickyScroll.enabled": true
 }
